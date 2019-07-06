@@ -23,7 +23,7 @@ import java.util.UUID;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddPatternEffects {
      public static void main(String[] args) 

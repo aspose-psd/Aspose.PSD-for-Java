@@ -16,7 +16,7 @@ import com.aspose.psd.imageoptions.PsdOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ExportImageToPSD {
     public static void main(String[] args) 

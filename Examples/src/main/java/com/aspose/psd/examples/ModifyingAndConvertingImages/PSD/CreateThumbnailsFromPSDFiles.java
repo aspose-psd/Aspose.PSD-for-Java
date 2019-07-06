@@ -14,7 +14,7 @@ import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CreateThumbnailsFromPSDFiles {
     public static void main(String[] args) 

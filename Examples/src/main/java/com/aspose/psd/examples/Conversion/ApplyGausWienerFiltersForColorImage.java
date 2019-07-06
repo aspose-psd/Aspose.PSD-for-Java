@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.GifOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ApplyGausWienerFiltersForColorImage {
     public static void main(String[] args) 

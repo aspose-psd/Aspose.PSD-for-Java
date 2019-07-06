@@ -12,7 +12,7 @@ import com.aspose.psd.fileformats.psd.layers.adjustmentlayers.ExposureLayer;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ManageExposureAdjustmentLayer {
      public static void main(String[] args) 

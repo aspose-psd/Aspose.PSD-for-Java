@@ -12,7 +12,7 @@ import com.aspose.psd.imageoptions.JpegOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CroppingbyShifts {
     public static void main(String[] args) 

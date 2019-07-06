@@ -16,7 +16,7 @@ import com.aspose.psd.xmp.types.complex.colorant.ColorType;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CropPSDFile {
     

@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class Utils {
     public static String getDataDir(Class c) {

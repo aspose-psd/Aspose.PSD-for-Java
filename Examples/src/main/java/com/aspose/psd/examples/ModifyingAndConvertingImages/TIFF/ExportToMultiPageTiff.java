@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ExportToMultiPageTiff {
     

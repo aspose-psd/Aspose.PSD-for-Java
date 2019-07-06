@@ -14,7 +14,7 @@ import com.aspose.psd.imageloadoptions.PsdLoadOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ColorOverLayEffect {
     

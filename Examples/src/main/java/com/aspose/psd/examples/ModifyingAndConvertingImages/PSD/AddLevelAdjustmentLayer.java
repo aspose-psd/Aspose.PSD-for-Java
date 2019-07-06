@@ -13,7 +13,7 @@ import com.aspose.psd.fileformats.psd.layers.layerresources.LevelChannel;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddLevelAdjustmentLayer {
     

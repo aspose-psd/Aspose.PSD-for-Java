@@ -16,7 +16,7 @@ import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class WritingAndModifyingEXIFData {
     public static void main(String[] args) 

@@ -15,7 +15,7 @@ import com.aspose.psd.imageoptions.BmpOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class DrawingBezier {
     

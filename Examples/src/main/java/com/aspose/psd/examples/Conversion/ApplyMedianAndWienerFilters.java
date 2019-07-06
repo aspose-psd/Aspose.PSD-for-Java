@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.GifOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ApplyMedianAndWienerFilters {
     public static void main(String[] args) 

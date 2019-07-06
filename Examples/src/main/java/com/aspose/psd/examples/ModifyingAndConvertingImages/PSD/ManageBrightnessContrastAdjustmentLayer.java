@@ -12,7 +12,7 @@ import com.aspose.psd.fileformats.psd.layers.adjustmentlayers.BrightnessContrast
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ManageBrightnessContrastAdjustmentLayer {
     

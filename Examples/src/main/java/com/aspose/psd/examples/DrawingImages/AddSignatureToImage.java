@@ -14,7 +14,7 @@ import com.aspose.psd.imageoptions.PngOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddSignatureToImage {
     public static void main(String[] args) 

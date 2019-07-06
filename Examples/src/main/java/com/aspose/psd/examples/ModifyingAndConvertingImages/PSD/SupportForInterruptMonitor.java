@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SupportForInterruptMonitor {
     //ExStart:SupportForInterruptMonitor

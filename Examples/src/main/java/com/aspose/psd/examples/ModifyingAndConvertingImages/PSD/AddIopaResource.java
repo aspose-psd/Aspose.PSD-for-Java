@@ -14,7 +14,7 @@ import com.aspose.psd.fileformats.psd.layers.layerresources.IopaResource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddIopaResource {
     public static void main(String[] args) 

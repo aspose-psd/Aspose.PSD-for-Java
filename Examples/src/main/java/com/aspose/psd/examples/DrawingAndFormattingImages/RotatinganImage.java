@@ -12,7 +12,7 @@ import com.aspose.psd.imageoptions.JpegOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class RotatinganImage {
     

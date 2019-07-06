@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.GifOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ApplyMotionWienerFilters {
     public static void main(String[] args) 

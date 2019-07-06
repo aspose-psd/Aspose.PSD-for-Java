@@ -11,7 +11,7 @@ import com.aspose.psd.fileformats.psd.PsdImage;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class DetectFlattenedPSD {
     public static void main(String[] args) 

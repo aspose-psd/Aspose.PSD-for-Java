@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class MeteredLicensing {
     

@@ -21,7 +21,7 @@ import java.util.UUID;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddStrokeLayerPattern {
     

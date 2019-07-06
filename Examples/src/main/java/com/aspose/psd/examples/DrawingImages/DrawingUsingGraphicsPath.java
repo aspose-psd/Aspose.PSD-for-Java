@@ -23,7 +23,7 @@ import com.aspose.psd.shapes.TextShape;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class DrawingUsingGraphicsPath {
     

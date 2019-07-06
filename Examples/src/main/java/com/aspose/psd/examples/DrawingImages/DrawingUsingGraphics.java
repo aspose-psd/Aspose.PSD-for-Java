@@ -17,7 +17,7 @@ import com.aspose.psd.imageoptions.BmpOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class DrawingUsingGraphics {
     public static void main(String[] args) 

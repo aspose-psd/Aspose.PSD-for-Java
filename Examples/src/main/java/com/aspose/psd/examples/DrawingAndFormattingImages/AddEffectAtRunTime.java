@@ -16,7 +16,7 @@ import javafx.scene.effect.Effect;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddEffectAtRunTime {
     

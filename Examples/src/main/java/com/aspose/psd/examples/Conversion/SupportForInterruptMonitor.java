@@ -15,7 +15,7 @@ import java.io.File;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SupportForInterruptMonitor {
     public static void main(String[] args) throws InterruptedException

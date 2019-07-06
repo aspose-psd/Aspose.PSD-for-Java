@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  *
- * @author mfazi
+ *  
  */
 //ExStart:SaveImageWorker
 public class SaveImageWorker {

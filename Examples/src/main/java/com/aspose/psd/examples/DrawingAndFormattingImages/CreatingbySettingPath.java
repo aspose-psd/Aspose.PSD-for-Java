@@ -13,7 +13,7 @@ import com.aspose.psd.sources.FileCreateSource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CreatingbySettingPath {
     public static void main(String[] args) 

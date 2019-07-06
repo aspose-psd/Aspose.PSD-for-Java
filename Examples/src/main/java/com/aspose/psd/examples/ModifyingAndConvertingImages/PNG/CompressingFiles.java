@@ -12,7 +12,7 @@ import com.aspose.psd.imageoptions.PngOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CompressingFiles {
      public static void main(String[] args) 

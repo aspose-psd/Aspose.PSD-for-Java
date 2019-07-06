@@ -13,7 +13,7 @@ import com.aspose.psd.fileformats.psd.layers.TextLayer;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddTextLayerOnRuntime {
   

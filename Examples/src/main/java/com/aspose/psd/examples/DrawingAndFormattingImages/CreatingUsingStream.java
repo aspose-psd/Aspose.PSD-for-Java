@@ -15,7 +15,7 @@ import com.aspose.psd.system.io.Stream;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CreatingUsingStream {
    

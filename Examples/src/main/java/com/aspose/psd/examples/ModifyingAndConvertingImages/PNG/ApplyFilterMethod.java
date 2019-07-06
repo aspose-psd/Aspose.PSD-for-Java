@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.PngOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ApplyFilterMethod {
     public static void main(String[] args) 

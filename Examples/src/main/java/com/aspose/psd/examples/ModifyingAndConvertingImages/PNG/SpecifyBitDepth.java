@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.PngOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SpecifyBitDepth {
      public static void main(String[] args) 

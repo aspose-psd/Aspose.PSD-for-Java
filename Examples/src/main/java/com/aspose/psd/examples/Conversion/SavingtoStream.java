@@ -15,7 +15,7 @@ import java.io.FileOutputStream;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SavingtoStream {
     public static void main(String[] args) throws FileNotFoundException

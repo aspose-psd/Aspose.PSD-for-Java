@@ -15,7 +15,7 @@ import com.aspose.psd.imageloadoptions.PsdLoadOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SupportShadowEffect {
     public static void main(String[] args)  

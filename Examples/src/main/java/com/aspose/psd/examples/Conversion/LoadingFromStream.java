@@ -18,7 +18,7 @@ import java.io.FileOutputStream;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class LoadingFromStream {
     

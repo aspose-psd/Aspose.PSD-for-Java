@@ -14,7 +14,7 @@ import com.aspose.psd.imageoptions.TiffOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class TIFFWithDeflateCompression {
     public static void main(String[] args) 

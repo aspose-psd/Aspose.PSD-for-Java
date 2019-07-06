@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class GrayScaling {
     

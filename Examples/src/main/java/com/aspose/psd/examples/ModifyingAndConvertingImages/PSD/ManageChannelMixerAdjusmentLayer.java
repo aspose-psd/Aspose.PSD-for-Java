@@ -14,7 +14,7 @@ import com.aspose.psd.fileformats.psd.layers.adjustmentlayers.RgbChannelMixerLay
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ManageChannelMixerAdjusmentLayer {
      public static void main(String[] args) 

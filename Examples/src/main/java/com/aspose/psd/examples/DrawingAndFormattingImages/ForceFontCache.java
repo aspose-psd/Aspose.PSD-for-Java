@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ForceFontCache {
     public static void main(String[] args) throws InterruptedException 

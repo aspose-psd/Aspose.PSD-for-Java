@@ -11,7 +11,7 @@ import com.aspose.psd.imageoptions.GifOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ImplementLossyGIFCompressor {
     

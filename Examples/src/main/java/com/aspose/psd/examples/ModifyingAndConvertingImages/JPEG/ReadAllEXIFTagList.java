@@ -16,7 +16,7 @@ import java.util.Properties;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ReadAllEXIFTagList {
     

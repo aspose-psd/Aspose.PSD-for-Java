@@ -13,7 +13,7 @@ import com.aspose.psd.fileformats.psd.layers.layerresources.ColorRangeHsl;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddHueSaturationAdjustmentLayer {
     public static void main(String[] args) 

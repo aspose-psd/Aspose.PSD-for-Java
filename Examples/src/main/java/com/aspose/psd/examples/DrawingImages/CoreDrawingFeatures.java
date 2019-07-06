@@ -12,7 +12,7 @@ import com.aspose.psd.imageoptions.BmpOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CoreDrawingFeatures {
     public static void main(String[] args) 

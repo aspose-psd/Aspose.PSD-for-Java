@@ -19,7 +19,7 @@ import com.aspose.psd.sources.FileCreateSource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CreateIndexedPSDFiles {
     

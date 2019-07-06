@@ -16,7 +16,7 @@ import java.util.Date;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class LayerCreationDateTime {
     public static void main(String[] args) 

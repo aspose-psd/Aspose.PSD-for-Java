@@ -15,7 +15,7 @@ import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ExtractThumbnailFromJFIF {
     

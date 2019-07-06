@@ -14,7 +14,7 @@ import com.aspose.psd.sources.FileCreateSource;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class CombiningImages {
     public static void main(String[] args) 

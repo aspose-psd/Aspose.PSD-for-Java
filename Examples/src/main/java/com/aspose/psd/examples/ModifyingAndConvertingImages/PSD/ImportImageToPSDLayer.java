@@ -16,7 +16,7 @@ import com.aspose.psd.fileformats.psd.layers.Layer;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ImportImageToPSDLayer {
     

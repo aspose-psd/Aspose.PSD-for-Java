@@ -14,7 +14,7 @@ import com.aspose.psd.fileformats.psd.layers.layerresources.CurvesDiscreteManage
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddCurvesAdjustmentLayer {
     public static void main(String[] args) 

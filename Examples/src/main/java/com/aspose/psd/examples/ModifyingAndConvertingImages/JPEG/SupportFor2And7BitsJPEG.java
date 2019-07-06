@@ -14,7 +14,7 @@ import com.aspose.psd.imageoptions.JpegOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class SupportFor2And7BitsJPEG {
     

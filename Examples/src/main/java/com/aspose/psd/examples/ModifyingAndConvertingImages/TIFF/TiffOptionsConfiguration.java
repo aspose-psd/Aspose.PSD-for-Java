@@ -13,7 +13,7 @@ import com.aspose.psd.imageoptions.TiffOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class TiffOptionsConfiguration {
     public static void main(String[] args) 

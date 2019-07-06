@@ -15,7 +15,7 @@ import com.aspose.psd.imageoptions.PsdOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class AddNewRegularLayerToPSD {
     public static void main(String[] args) 

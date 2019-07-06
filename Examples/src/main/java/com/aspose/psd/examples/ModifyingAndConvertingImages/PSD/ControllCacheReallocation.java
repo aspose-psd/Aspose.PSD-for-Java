@@ -18,7 +18,7 @@ import com.aspose.psd.system.io.MemoryStream;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class ControllCacheReallocation {
     public static void main(String[] args) 

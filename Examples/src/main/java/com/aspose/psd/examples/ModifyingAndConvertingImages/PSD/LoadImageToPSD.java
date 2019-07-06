@@ -13,7 +13,7 @@ import com.aspose.psd.fileformats.psd.layers.Layer;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class LoadImageToPSD {
      public static void main(String[] args) 

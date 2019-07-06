@@ -16,7 +16,7 @@ import com.aspose.psd.imageoptions.TiffOptions;
 
 /**
  *
- * @author mfazi
+ *  
  */
 public class PSDToRasterImageFormats {
     
