@@ -11,43 +11,39 @@ import com.aspose.psd.exif.JpegExifData;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.resources.Thumbnail4Resource;
 import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
-import java.util.Properties; 
 
 
-/**
- *
- *  
- */
-public class ReadAllEXIFTagList {
-    
+public class ReadAllEXIFTags {
     public static void main(String[] args) 
     {
-       //ExStart:ReadAllEXIFTagList
-       String dataDir = Utils.getDataDir(ReadAllEXIFTagList.class) + "ModifyingAndConvertingImages/";
+       //ExStart:ReadAllEXIFTags
+       String dataDir = Utils.getDataDir(ReadAllEXIFTags.class) + "ModifyingAndConvertingImages/";
        
-       PsdImage image = (PsdImage)Image.load(dataDir + "1280px-Zebras_Serengeti.psd");
+       PsdImage image = (PsdImage)Image.load(dataDir+"1280px-Zebras_Serengeti.psd");
        
-       // Iterate over resources.
-                 for(int i =0; i < image.getImageResources().length; i++)
+        // Iterate over resources.
+                
+                for(int i =0; i < image.getImageResources().length; i++)
                 {
                     // Find thumbnail resource. Typically they are in the Jpeg file format.
                     if (image.getImageResources()[i] instanceof ThumbnailResource || image.getImageResources()[i] instanceof Thumbnail4Resource)
                     {
-                        // Extract thumbnail data and store it as a separate image file.
+                        // Extract exif data and print to the console.
                         ThumbnailResource thumbnail = (ThumbnailResource)image.getImageResources()[i];
-                        JpegExifData exifData = thumbnail.getJpegOptions().getExifData();
-                        if (exifData != null)
-                        {
-                            
+                        JpegExifData exif = thumbnail.getJpegOptions().getExifData();
+                        if (exif != null)
+                        {                            
                            
-                            for(int j =0; j < exifData.getProperties().length; j++ ){
+                            for(int j =0; j < exif.getProperties().length; j++ ){
                             
-                                System.out.println(exifData.getProperties()[j].getId() + ":" + exifData.getProperties()[j].getValue());
+                                System.out.println(exif.getProperties()[j].getId() + ":" + exif.getProperties()[j].getValue());
                             }
 
                         }
                     }
                 }
-       //ExEnd:ReadAllEXIFTagList
+       
+       //ExEnd:ReadAllEXIFTags
+       
     }
 }
