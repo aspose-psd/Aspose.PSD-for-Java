@@ -25,10 +25,13 @@ public class ExportImagesinMultiThreadEnv {
     
     public static void main(String[] args) throws FileNotFoundException 
     {
+        
        //ExStart:ExportImagesinMultiThreadEnv
        String dataDir = Utils.getDataDir(ExportImagesinMultiThreadEnv.class) + "Conversion/";
        
        String imageDataPath = dataDir + "sample.psd";
+        try {
+             
        
       FileInputStream fileStream = new FileInputStream(imageDataPath);
       
@@ -47,6 +50,16 @@ public class ExportImagesinMultiThreadEnv {
         }
         image.savePixels(new Rectangle(0, 0, 2, 2), pixels);
         image.save();
+        } 
+       finally
+            {
+                // Delete the output file.
+                File f = new File(imageDataPath);
+                if (f.exists())
+                {
+                    f.delete();
+                }
+            }
        //ExEnd:ExportImagesinMultiThreadEnv
     }
 }
