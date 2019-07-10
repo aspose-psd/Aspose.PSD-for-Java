@@ -48,5 +48,6 @@ public class CreateThumbnailsFromPSDFiles {
                         }
                     }
                 }
+       //ExEnd:CreateThumbnailsFromPSDFiles
     }
 }
