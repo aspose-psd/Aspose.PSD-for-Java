@@ -12,10 +12,7 @@ import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.TextLayer;
 
-/**
- *
- * @author mfazi
- */
+
 public class UpdateTextLayerInPSDFile {
     public static void main(String[] args) 
     {

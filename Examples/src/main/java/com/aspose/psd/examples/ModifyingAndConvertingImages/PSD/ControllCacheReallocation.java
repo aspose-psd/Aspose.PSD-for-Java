@@ -13,6 +13,7 @@ import com.aspose.psd.Image;
 import com.aspose.psd.RasterImage;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.imageoptions.GifOptions;
+import com.aspose.psd.imageoptions.PsdOptions;
 import com.aspose.psd.sources.StreamSource;
 import com.aspose.psd.system.io.MemoryStream;
 
@@ -42,7 +43,8 @@ public class ControllCacheReallocation {
             // At any time you can check how many bytes are currently allocated for the cache in memory or on disk By examining the following properties
             long l1 = Cache.getAllocatedDiskBytesCount();
             long l2 = Cache.getAllocatedMemoryBytesCount();
-            GifOptions options = new GifOptions();
+            
+            PsdOptions options = new PsdOptions();
             
            Color[] color = { Color.getRed(), Color.getBlue(), Color.getBlack(), Color.getWhite() };
             options.setPalette(new ColorPalette(color)) ;
@@ -62,7 +64,7 @@ public class ControllCacheReallocation {
                 long memoryBytes = Cache.getAllocatedMemoryBytesCount();
        
                 
-                // The allocation properties may be used to check whether all Aspose.Imaging objects were properly disposed. If you've forgotten to call dispose on an object the cache values will not be 0.
+                // The allocation properties may be used to check whether all Aspose.PSD objects were properly disposed. If you've forgotten to call dispose on an object the cache values will not be 0.
             l1 = Cache.getAllocatedDiskBytesCount();
             l2 = Cache.getAllocatedMemoryBytesCount();
        //ExEnd:ControllCacheReallocation
