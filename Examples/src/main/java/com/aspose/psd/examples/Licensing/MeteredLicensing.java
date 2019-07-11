@@ -18,7 +18,7 @@ public class MeteredLicensing {
         {
             //ExStart:MeteredLicensing
             
-            // Create an instance of CAD Metered class
+            // Create an instance of PSD Metered class
             Metered metered = new Metered();
 
             // Access the setMeteredKey property and pass public and private keys as parameters
