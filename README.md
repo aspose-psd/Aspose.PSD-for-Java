@@ -15,4 +15,13 @@ After you have downloaded the ZIP file from the [Download ZIP](https://github.co
 
 [How to Run the Examples](https://docs.aspose.com/display/psdjava/How+to+Run+the+Examples)
 
+## Resources
+
++ **Website:** [www.aspose.com](http://www.aspose.com)
++ **Product Home:** [Aspose.PSD for Java](https://products.aspose.com/psd/java)
++ **Documentation:** [Aspose.PSD for Java Documentation](https://docs.aspose.com/display/psdjava/Aspose.PSD+for+Java+Home)
++ **Forum:** [Aspose.PSD for Java Forum](https://forum.aspose.com/c/psd)
++ **Blog:** [Aspose.PSD for Java Blog](https://blog.aspose.com/category/aspose-products/aspose.psd-product-family/)
+
+
 Please feel free to contact us if you have any question, issue or suggestion.
