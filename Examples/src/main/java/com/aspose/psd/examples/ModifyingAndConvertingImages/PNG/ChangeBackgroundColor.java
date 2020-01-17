@@ -8,15 +8,11 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.PNG;
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
-import com.aspose.psd.fileformats.png.PngImage;
 import com.aspose.psd.fileformats.psd.PsdImage;
 
-/**
- *
- *  
- */
+
 public class ChangeBackgroundColor {
-     public static void main(String[] args) 
+     public static void main(String[] args)
     {
        //ExStart:ChangeBackgroundColor
        String dataDir = Utils.getDataDir(ChangeBackgroundColor.class) + "ModifyingAndConvertingImages/";
@@ -25,7 +21,7 @@ public class ChangeBackgroundColor {
        
        // Convert to PngImage based on PsdImage.
        
-       PngImage pngImage = new PngImage(psdImage);
+       PsdImage pngImage = new PsdImage(psdImage);
        
        int[] pixels = pngImage.loadArgb32Pixels(pngImage.getBounds());
                     // Iterate through the pixel array and Check the pixel information 
