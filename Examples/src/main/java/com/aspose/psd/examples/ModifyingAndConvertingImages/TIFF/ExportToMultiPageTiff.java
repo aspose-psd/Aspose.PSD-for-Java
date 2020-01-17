@@ -8,16 +8,11 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.TIFF;
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
-import com.aspose.psd.fileformats.tiff.TiffFrame;
-import com.aspose.psd.fileformats.tiff.TiffImage;
 import com.aspose.psd.fileformats.tiff.enums.TiffExpectedFormat;
 import com.aspose.psd.imageoptions.TiffOptions;
 import java.util.ArrayList;
 
-/**
- *
- *  
- */
+
 public class ExportToMultiPageTiff {
     
      public static void main(String[] args) 
@@ -29,7 +24,7 @@ public class ExportToMultiPageTiff {
        PsdImage psdImage = (PsdImage)Image.load(dataDir + "layers.psd");
        
         // Initialize tiff frame list.
-                ArrayList<TiffFrame> frames = new ArrayList<TiffFrame>();
+                //ArrayList<TiffFrame> frames = new ArrayList<TiffFrame>();
 
                 // Iterate over each layer of PsdImage and convert it to Tiff frame.
                 
@@ -38,14 +33,14 @@ public class ExportToMultiPageTiff {
         
                 for(int i=0; i < psdImage.getLayers().length; i++)
                 {
-                    TiffFrame frame = new TiffFrame(psdImage.getLayers()[i],options );
-                    frames.add(frame);
+                    //TiffFrame frame = new TiffFrame(psdImage.getLayers()[i],options );
+                    //frames.add(frame);
                 }
 
                 // Create a new TiffImage with frames created earlier and save to disk.
-                TiffFrame[] tiffFrames = frames.toArray(new TiffFrame[frames.size()]);  
-                TiffImage tiffImage = new TiffImage(tiffFrames);
-                tiffImage.save(dataDir+ "ExportToMultiPageTiff_output.tif");
+                //TiffFrame[] tiffFrames = frames.toArray(new TiffFrame[frames.size()]);  
+                //TiffImage tiffImage = new TiffImage(tiffFrames);
+               // tiffImage.save(dataDir+ "ExportToMultiPageTiff_output.tif");
        //ExEnd:ExportToMultiPageTiff
        
     }
