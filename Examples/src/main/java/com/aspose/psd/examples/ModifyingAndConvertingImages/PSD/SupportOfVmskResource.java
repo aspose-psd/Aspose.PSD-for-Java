@@ -24,7 +24,7 @@ public class SupportOfVmskResource {
          
          //ExStart:SupportOfVmskResource
      
-        String dataDir = Utils.getDataDir(SupportOfRotateLayer.class) + "PSD/";
+        String dataDir = Utils.getDataDir(SupportOfVmskResource.class) + "PSD/";
         
         String sourceFileName = dataDir+ "Rectangle.psd";
     String exportPath = dataDir + "Rectangle_changed.psd";
@@ -83,7 +83,7 @@ public class SupportOfVmskResource {
     }
     finally
     {
-        im.close();
+        im.dispose();
     }
          //ExEnd:SupportOfVmskResource
      }

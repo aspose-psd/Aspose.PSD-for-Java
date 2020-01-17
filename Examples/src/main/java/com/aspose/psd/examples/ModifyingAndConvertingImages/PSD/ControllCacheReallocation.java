@@ -17,10 +17,7 @@ import com.aspose.psd.imageoptions.PsdOptions;
 import com.aspose.psd.sources.StreamSource;
 import com.aspose.psd.system.io.MemoryStream;
 
-/**
- *
- *  
- */
+
 public class ControllCacheReallocation {
     public static void main(String[] args) 
     {
@@ -48,7 +45,7 @@ public class ControllCacheReallocation {
             
            Color[] color = { Color.getRed(), Color.getBlue(), Color.getBlack(), Color.getWhite() };
             options.setPalette(new ColorPalette(color)) ;
-            options.setSource(new StreamSource(new MemoryStream(), true));
+            options.setSource(new StreamSource(new java.io.ByteArrayInputStream(new byte[0])));
             
             RasterImage image = (RasterImage)Image.create(options, 100, 100);
             Color[] pixels = new Color[10000];

@@ -132,7 +132,7 @@ public class SupportOfGdFlResource {
         }
         finally
         {
-            im.close();
+            im.dispose();
         }
        
        //ExEnd:SupportOfGdFlResource

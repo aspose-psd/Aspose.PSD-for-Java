@@ -7,15 +7,11 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.PSD;
 
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
-import com.aspose.psd.fileformats.bmp.BmpImage;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.resources.ThumbnailFormat;
 import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
-/**
- *
- *  
- */
+
 public class CreateThumbnailsFromPSDFiles {
     public static void main(String[] args) 
     {
@@ -42,7 +38,7 @@ public class CreateThumbnailsFromPSDFiles {
                         if (thumbnail.getFormat()== ThumbnailFormat.KJpegRgb)
                         {
                             // Create a new BmpImage by specifying the width and height,  Store the pixels of thumbnail on to the newly created BmpImage and save image
-                            BmpImage thumnailImage = new BmpImage(thumbnail.getWidth(), thumbnail.getHeight());
+                            PsdImage thumnailImage = new PsdImage(thumbnail.getWidth(), thumbnail.getHeight());
                             thumnailImage.savePixels(thumnailImage.getBounds(), thumbnail.getThumbnailData());
                             thumnailImage.save(dataDir + "CreateThumbnailsFromPSDFiles_out_"+i+".bmp");
                         }

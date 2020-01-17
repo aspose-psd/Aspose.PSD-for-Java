@@ -11,10 +11,7 @@ import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 
-/**
- *
- *  
- */
+
 public class LoadImageToPSD {
      public static void main(String[] args) 
     {
@@ -31,7 +28,7 @@ public class LoadImageToPSD {
          
          try
         {
-            layer = new Layer((RasterImage)im);
+            layer = new Layer((RasterImage)im,false);
             image.addLayer(layer);
         }
         catch (Exception e)

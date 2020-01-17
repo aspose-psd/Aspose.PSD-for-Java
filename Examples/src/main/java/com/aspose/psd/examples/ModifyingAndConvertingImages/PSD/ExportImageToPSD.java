@@ -9,23 +9,20 @@ import com.aspose.psd.Color;
 import com.aspose.psd.Graphics;
 import com.aspose.psd.Pen;
 import com.aspose.psd.examples.Utils.Utils;
-import com.aspose.psd.fileformats.bmp.BmpImage;
 import com.aspose.psd.fileformats.psd.ColorModes;
 import com.aspose.psd.fileformats.psd.CompressionMethod;
+import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.imageoptions.PsdOptions;
 
-/**
- *
- *  
- */
+
 public class ExportImageToPSD {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
        //ExStart:ExportImageToPSD
        String dataDir = Utils.getDataDir(ExportImageToPSD.class) + "PSD/";
        
        // Create a new image from scratch.
-            BmpImage bmpImage = new BmpImage(300, 300);
+            PsdImage bmpImage = new PsdImage(300, 300);
             
                 // Fill image data.
                 Graphics graphics = new Graphics(bmpImage);

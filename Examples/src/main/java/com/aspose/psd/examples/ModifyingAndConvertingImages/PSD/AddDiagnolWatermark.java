@@ -44,7 +44,7 @@ public class AddDiagnolWatermark {
                 SolidBrush brush = new SolidBrush(Color.fromArgb(50, 128, 128, 128));
                     // specify transform matrix to rotate watermark.
                     graphics.setTransform(new Matrix());
-                    graphics.getTransform().rotateAt(45, new PointF(psdImage.getWidth() / 2, psdImage.getHeight() / 2));
+                    //graphics.getTransform().rotateAt(45, new PointF(psdImage.getWidth() / 2, psdImage.getHeight() / 2));
 
                     // Specify string alignment to put watermark at the image center.
                     StringFormat sf = new StringFormat();

@@ -10,17 +10,13 @@ import com.aspose.psd.Graphics;
 import com.aspose.psd.Image;
 import com.aspose.psd.Point;
 import com.aspose.psd.examples.Utils.Utils;
-import com.aspose.psd.fileformats.png.PngImage;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 
-/**
- *
- *  
- */
+
 public class ImportImageToPSDLayer {
     
-    public static void main(String[] args) 
+   public static void main(String[] args)
     {
        //ExStart:ImportImageToPSDLayer
        String dataDir = Utils.getDataDir(ImportImageToPSDLayer.class) + "PSD/";
@@ -31,7 +27,7 @@ public class ImportImageToPSDLayer {
        Layer layer = image.getLayers()[1];
        
        // Create an image that is needed to be imported into the PSD file.
-       PngImage drawImage = new PngImage(200, 200);
+       PsdImage drawImage = new PsdImage(200, 200);
        
         // Fill image surface as needed.
         Graphics g = new Graphics(drawImage);

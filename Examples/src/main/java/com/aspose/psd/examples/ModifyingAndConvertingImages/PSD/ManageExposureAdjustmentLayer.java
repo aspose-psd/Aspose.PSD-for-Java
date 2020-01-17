@@ -10,10 +10,7 @@ import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.adjustmentlayers.ExposureLayer;
 
-/**
- *
- *  
- */
+
 public class ManageExposureAdjustmentLayer {
      public static void main(String[] args) 
     {
@@ -46,11 +43,8 @@ public class ManageExposureAdjustmentLayer {
 
             PsdImage img = (PsdImage)Image.load(sourceFileName);
             
-                ExposureLayer newlayer = img.addExposureAdjustmentLayer();
-                newlayer.setExposure(10);
-                newlayer.setOffset(-0.25f);
-                newlayer.setGammaCorrection(2f);
-
+                ExposureLayer newlayer = img.addExposureAdjustmentLayer(10, -0.25f, 2f);
+                
                 img.save(psdPathAfterChange);
             
     //ExEnd:ManageExposureAdjustmentLayer

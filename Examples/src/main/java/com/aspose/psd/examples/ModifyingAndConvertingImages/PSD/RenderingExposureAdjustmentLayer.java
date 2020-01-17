@@ -56,11 +56,8 @@ public class RenderingExposureAdjustmentLayer {
 
               PsdImage img = (PsdImage)Image.load(sourceFileName);
             
-                ExposureLayer newlayer = img.addExposureAdjustmentLayer();
-                newlayer.setExposure(2);
-                newlayer.setOffset(-0.25f);
-                newlayer.setGammaCorrection(2f);
-
+                ExposureLayer newlayer = img.addExposureAdjustmentLayer(2, -0.25f, 2f);
+                
                 // Save PSD
                 img.save(psdPathAfterChange);
 
