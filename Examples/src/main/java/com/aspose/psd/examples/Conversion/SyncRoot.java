@@ -13,15 +13,14 @@ import com.aspose.psd.system.io.MemoryStream;
 
 public class SyncRoot {
    
-    public static void main(String[] args) throws InterruptedException
+    public static void main(String[] args)
     {
        //ExStart:SyncRoot
        String dataDir = Utils.getDataDir(SyncRoot.class) + "Conversion/";
-       // Create an instance of Memory stream class.
-       MemoryStream memoryStream = new MemoryStream();
+       
        
         // Create an instance of Stream container class and assign memory stream object.
-       StreamContainer streamContainer = new StreamContainer(memoryStream);
+       StreamContainer streamContainer = new StreamContainer(new java.io.ByteArrayInputStream(new byte[0]));
        
             try
         {

@@ -8,27 +8,24 @@ package com.aspose.psd.examples.Conversion;
 import com.aspose.psd.Color;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.jpeg.JpegCompressionColorMode;
-import com.aspose.psd.fileformats.jpeg.JpegImage;
+import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.imageoptions.JpegOptions;
 import com.aspose.psd.sources.StreamSource;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-/**
- *
- *  
- */
+
 public class ColorConversionUsingICCProfiles {
     
-     public static void main(String[] args) throws FileNotFoundException
+    public static void main(String[] args) throws FileNotFoundException
     {
        //ExStart:ColorConversionUsingICCProfiles
        String dataDir = Utils.getDataDir(ColorConversionUsingICCProfiles.class) + "Conversion/";
        
        
        // Create a new JpegImage.
-            JpegImage image = new JpegImage(500, 500);
+            PsdImage image = new PsdImage(500, 500);
                 // Fill image data.
                 int count = image.getWidth() * image.getHeight();
                 int[] pixels = new int[count];

@@ -8,7 +8,7 @@ package com.aspose.psd.examples.Conversion;
 import com.aspose.psd.Color;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.jpeg.JpegCompressionColorMode;
-import com.aspose.psd.fileformats.jpeg.JpegImage;
+import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.imageoptions.JpegOptions;
 import com.aspose.psd.sources.StreamSource;
 
@@ -16,18 +16,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-/**
- *
- *  
- */
+
 public class ColorConversionUsingDefaultProfiles {
     
-     public static void main(String[] args) throws FileNotFoundException 
+     public static void main(String[] args) throws FileNotFoundException
     {
        //ExStart:ColorConversionUsingDefaultProfiles
        String dataDir = Utils.getDataDir(ColorConversionUsingDefaultProfiles.class) + "Conversion/";
        
-       JpegImage image = new JpegImage(500, 500);
+       PsdImage image = new PsdImage(500, 500);
        // Fill image data.
                 int count = image.getWidth() * image.getHeight();
                 int[] pixels = new int[count];
@@ -85,8 +82,8 @@ public class ColorConversionUsingDefaultProfiles {
                 StreamSource cmykprofile = new StreamSource(cmykInputStream);
                
                 
-                image.setDestinationRgbColorProfile(rgbprofile);
-                image.setDestinationCmykColorProfile(cmykprofile);
+                image.setRgbColorProfile(rgbprofile);
+                image.setRgbColorProfile(cmykprofile);
 
                 // Save the resultant image with new YCCK profiles. You will notice differences in color values if compare the images.
                 JpegOptions options = new JpegOptions();
