@@ -8,10 +8,7 @@ package com.aspose.psd.examples.Licensing;
 import com.aspose.psd.Metered;
 import java.math.BigDecimal;
 
-/**
- *
- *  
- */
+
 public class MeteredLicensing {
     
     public static void main(String[] args) 
@@ -25,15 +22,12 @@ public class MeteredLicensing {
             metered.setMeteredKey("*****", "*****");
 
             // Get metered data amount before calling API
-            BigDecimal  amountbefore = Metered.getConsumptionQuantity();
-
-            // Display information
-           System.out.println("Amount Consumed Before: " + amountbefore.toString());
+                    
+           System.out.println("Amount Consumed Before: " + Metered.getConsumptionQuantity());
+           
             // Get metered data amount After calling API
-            BigDecimal  amountafter = Metered.getConsumptionQuantity();
-
-            // Display information
-            System.out.println("Amount Consumed After: " + amountafter.toString());
+           
+            System.out.println("Amount Consumed After: " + Metered.getConsumptionQuantity());
 
             //ExEnd:MeteredLicensing
             
