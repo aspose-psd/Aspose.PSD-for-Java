@@ -8,15 +8,14 @@ package com.aspose.psd.examples.DrawingAndFormattingImages;
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.imageoptions.BmpOptions;
+import com.aspose.psd.sources.FileCreateSource;
 import com.aspose.psd.sources.StreamSource;
 import com.aspose.psd.system.io.FileMode;
 import com.aspose.psd.system.io.FileStream;
 import com.aspose.psd.system.io.Stream;
+import java.io.FileInputStream;
 
-/**
- *
- *  
- */
+
 public class CreatingUsingStream {
    
     public static void main(String[] args) 
@@ -29,9 +28,9 @@ public class CreatingUsingStream {
     ImageOptions.setBitsPerPixel(24);
 
     // Create an instance of System.IO.Stream
-    Stream stream = new FileStream(dataDir + "sample_out.bmp", FileMode.Create);
+    FileCreateSource stream = new FileCreateSource(dataDir + "sample_out.bmp");
     // Define the source property for the instance of BmpOptions Second boolean parameter determines if the Stream is disposed once get out of scope
-    ImageOptions.setSource( new StreamSource(stream, true));
+    ImageOptions.setSource(stream);
 
     // Creates an instance of Image and call Create method by passing the BmpOptions object
     Image image = Image.create(ImageOptions, 500, 500);
