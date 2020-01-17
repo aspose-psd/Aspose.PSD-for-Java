@@ -8,15 +8,11 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.JPEG;
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.exif.JpegExifData;
-import com.aspose.psd.fileformats.jpeg.JpegImage;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.resources.Thumbnail4Resource;
 import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
-/**
- *
- *  
- */
+
 public class AutoCorrectOrientationOfJPEGImages {
     
     
@@ -40,10 +36,10 @@ public class AutoCorrectOrientationOfJPEGImages {
                         if (exifData != null && exifData.getThumbnail() != null)
                         {
                             // If there is thumbnail stored then auto-rotate it.
-                            JpegImage jpegImage =(JpegImage)exifData.getThumbnail();
+                            PsdImage jpegImage =(PsdImage)exifData.getThumbnail();
                             if (jpegImage != null)
                             {
-                                jpegImage.autoRotate();
+                                //jpegImage.autoRotate();
                             }
                         }
                     }

@@ -8,18 +8,14 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.JPEG;
 import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.exif.JpegExifData;
-import com.aspose.psd.fileformats.jpeg.JpegImage;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.resources.Thumbnail4Resource;
 import com.aspose.psd.fileformats.psd.resources.ThumbnailResource;
 
-/**
- *
- *  
- */
+
 public class AddThumbnailToJFIFSegment {
     
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
        //ExStart:AddThumbnailToJFIFSegment
        String dataDir = Utils.getDataDir(AddThumbnailToJFIFSegment.class) + "ModifyingAndConvertingImages/";
@@ -37,7 +33,7 @@ public class AddThumbnailToJFIFSegment {
                         // Adjust thumbnail data.
                         ThumbnailResource thumbnail = (ThumbnailResource)image.getImageResources()[i];
                         JpegExifData exifData = new JpegExifData();
-                        JpegImage thumbnailImage = new JpegImage(100, 100);
+                        PsdImage thumbnailImage = new PsdImage(100, 100);
                         try
                         {
                             // Fill thumbnail data.
