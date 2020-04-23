@@ -30,6 +30,7 @@ public class LoadImageToPSD {
         {
             layer = new Layer((RasterImage)im,false);
             image.addLayer(layer);
+            image.save(outputFilePath);
         }
         catch (Exception e)
         {
@@ -37,7 +38,7 @@ public class LoadImageToPSD {
             {
                 layer.dispose();
             }
-           System.out.println(e);
+           System.out.println(e.getMessage());
         }
        //ExEnd:LoadImageToPSD
     }

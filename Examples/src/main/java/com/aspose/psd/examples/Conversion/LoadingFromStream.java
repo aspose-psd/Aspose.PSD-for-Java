@@ -35,8 +35,7 @@ public class LoadingFromStream {
          Image image = Image.load(inputStream);
          
          PsdImage psdImage = (PsdImage)image;
-        MemoryStream stream = new MemoryStream();
-        FileOutputStream outputStream = new FileOutputStream(sourceFile);
+         FileOutputStream outputStream = new FileOutputStream(destName);
         psdImage.save(outputStream, new PngOptions());
         
        //ExEnd:LoadingFromStream

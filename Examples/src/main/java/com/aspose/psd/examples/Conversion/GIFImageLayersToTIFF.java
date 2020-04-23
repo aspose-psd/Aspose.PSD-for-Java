@@ -38,7 +38,7 @@ public class GIFImageLayersToTIFF {
 
                     // Create an instance of TIFF Option class and Save the PSD layer as TIFF image
                     TiffOptions objTiff = new TiffOptions(TiffExpectedFormat.TiffDeflateRgb);
-                    layer.save("output" + i + "_out.tiff", objTiff);
+                    layer.save(dataDir + "output" + i + "_out.tiff", objTiff);
                 }
        //ExEnd:GIFImageLayersToTIFF
        

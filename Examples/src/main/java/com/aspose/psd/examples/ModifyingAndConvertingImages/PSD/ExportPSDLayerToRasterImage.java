@@ -33,7 +33,7 @@ public class ExportPSDLayerToRasterImage {
                 for (int i = 0; i < psdImage.getLayers().length; i++)
                 {
                     // Convert and save the layer to PNG file format.
-                    psdImage.getLayers()[i].save(String.format("layer_out{0}.png", i + 1), pngOptions);
+                    psdImage.getLayers()[i].save(dataDir + String.format("layer_out%d.png", i + 1), pngOptions);
                 }
             
        //ExEnd:ExportPSDLayerToRasterImage

@@ -11,6 +11,8 @@ import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 
+import java.util.Objects;
+
 /**
  *
  *  
@@ -27,7 +29,7 @@ public class ColorReplacementInPSD {
             
             for (int i =0; i <image.getLayers().length; i++)
                 {
-                    if (image.getLayers()[i].getName() == "Rectangle 1")
+                    if (Objects.equals(image.getLayers()[i].getName(), "Rectangle 1"))
                     {
                         Layer layer = image.getLayers()[i];
                         int dd = 0;
