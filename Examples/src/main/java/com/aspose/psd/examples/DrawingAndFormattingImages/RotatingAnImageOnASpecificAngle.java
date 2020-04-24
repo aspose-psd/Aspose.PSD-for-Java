@@ -15,12 +15,12 @@ import com.aspose.psd.imageoptions.JpegOptions;
  *
  *  
  */
-public class RotatinganImageonaSpecificAngle {
-    
+public class RotatingAnImageOnASpecificAngle
+{
     public static void main(String[] args)  
     {
-       //ExStart:RotatinganImageonaSpecificAngle
-       String dataDir = Utils.getDataDir(RotatinganImageonaSpecificAngle.class) + "DrawingAndFormattingImages/";
+       //ExStart:RotatingAnImageOnASpecificAngle
+       String dataDir = Utils.getDataDir(RotatingAnImageOnASpecificAngle.class) + "DrawingAndFormattingImages/";
        
        String sourceFile = dataDir + "sample.psd";
        String destName = dataDir + "RotatingImageOnSpecificAngle_out.jpg";
@@ -34,6 +34,6 @@ public class RotatinganImageonaSpecificAngle {
         // Perform the rotation on 20 degree while keeping the image size proportional with red background color and Save the result to a new file
         image.rotate(20f, true, Color.getRed());
         image.save(destName, new JpegOptions());
-       //ExEnd:RotatinganImageonaSpecificAngle
+       //ExEnd:RotatingAnImageOnASpecificAngle
     }
 }

@@ -12,11 +12,12 @@ import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.imageoptions.BmpOptions;
 
 
-public class DitheringforRasterImages {
+public class DitheringForRasterImages
+{
     public static void main(String[] args) 
     {
-       //ExStart:DitheringforRasterImages
-     String dataDir = Utils.getDataDir(DitheringforRasterImages.class) + "DrawingAndFormattingImages/";
+       //ExStart:DitheringForRasterImages
+     String dataDir = Utils.getDataDir(DitheringForRasterImages.class) + "DrawingAndFormattingImages/";
      String sourceFile = dataDir + "sample.psd";
      String destName = dataDir + "SampleImage_out.bmp";
 
@@ -28,7 +29,7 @@ public class DitheringforRasterImages {
                 image.save(destName, new BmpOptions());
             
      
-     //ExEnd:DitheringforRasterImages
+     //ExEnd:DitheringForRasterImages
     }
     
 }

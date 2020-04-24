@@ -14,11 +14,12 @@ import com.aspose.psd.imageoptions.JpegOptions;
  *
  *  
  */
-public class CroppingbyShifts {
+public class CroppingByShifts
+{
     public static void main(String[] args) 
     {
-       //ExStart:CroppingbyShifts
-     String dataDir = Utils.getDataDir(CroppingbyShifts.class) + "DrawingAndFormattingImages/";
+       //ExStart:CroppingByShifts
+     String dataDir = Utils.getDataDir(CroppingByShifts.class) + "DrawingAndFormattingImages/";
      String sourceFile = dataDir + "sample.psd";
      String destName = dataDir + "CroppingByShifts_out.jpg";
     
@@ -41,6 +42,6 @@ public class CroppingbyShifts {
       rasterImage.crop(leftShift, rightShift, topShift, bottomShift);
       rasterImage.save(destName, new JpegOptions());
 
-    //ExEnd:CroppingbyShifts
+    //ExEnd:CroppingByShifts
     }
 }

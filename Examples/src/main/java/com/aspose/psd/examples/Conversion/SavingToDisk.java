@@ -14,12 +14,12 @@ import com.aspose.psd.imageoptions.PngOptions;
  *
  *  
  */
-public class SavingtoDisk {
-    
+public class SavingToDisk
+{
     public static void main(String[] args)
     {
-       //ExStart:SavingtoDisk
-       String dataDir = Utils.getDataDir(SavingtoDisk.class) + "Conversion/";
+       //ExStart:SavingToDisk
+       String dataDir = Utils.getDataDir(SavingToDisk.class) + "Conversion/";
        String sourceFile = dataDir + "sample.psd";
        String destName = dataDir + "result.png";
 
@@ -29,6 +29,6 @@ public class SavingtoDisk {
         PsdImage psdImage = (PsdImage)image;
         psdImage.save(destName, new PngOptions());
         
-       //ExEnd:SavingtoDisk
+       //ExEnd:SavingToDisk
     }
 }

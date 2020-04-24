@@ -17,12 +17,12 @@ import com.aspose.psd.fileformats.tiff.enums.TiffResolutionUnits;
 import com.aspose.psd.imageoptions.TiffOptions;
 
 
-public class TIFFwithAdobeDeflateCompression {
-    
+public class TIFFWithAdobeDeflateCompression
+{
     public static void main(String[] args) 
     {
-       //ExStart:TIFFwithAdobeDeflateCompression
-       String dataDir = Utils.getDataDir(TIFFwithAdobeDeflateCompression.class) + "ModifyingAndConvertingImages/";
+       //ExStart:TIFFWithAdobeDeflateCompression
+       String dataDir = Utils.getDataDir(TIFFWithAdobeDeflateCompression.class) + "ModifyingAndConvertingImages/";
        
        // Create an instance of TiffOptions and set its various properties
             TiffOptions options = new TiffOptions(TiffExpectedFormat.Default);
@@ -54,6 +54,6 @@ public class TIFFwithAdobeDeflateCompression {
                 // Save resultant image
                 tiffImage.save(dataDir+"TIFFwithAdobeDeflateCompression_output.tif");
             
-       //ExEnd:TIFFwithAdobeDeflateCompression
+       //ExEnd:TIFFWithAdobeDeflateCompression
     }
 }

@@ -15,11 +15,12 @@ import com.aspose.psd.imageoptions.JpegOptions;
  *
  *  
  */
-public class CroppingbyRectangle {
+public class CroppingByRectangle
+{
     public static void main(String[] args) 
     {
-       //ExStart:CroppingbyRectangle
-     String dataDir = Utils.getDataDir(CroppingbyRectangle.class) + "DrawingAndFormattingImages/";
+       //ExStart:CroppingByRectangle
+     String dataDir = Utils.getDataDir(CroppingByRectangle.class) + "DrawingAndFormattingImages/";
      
      String sourceFile = dataDir + "sample.psd";
     String destName = dataDir + "CroppingByRectangle_out.jpg";
@@ -39,6 +40,6 @@ public class CroppingbyRectangle {
     rasterImage.crop(rectangle);
     rasterImage.save(destName, new JpegOptions());
     
-     //ExEnd:CroppingbyRectangle
+     //ExEnd:CroppingByRectangle
     }
 }

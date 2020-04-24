@@ -9,7 +9,7 @@ import com.aspose.psd.Image;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.imageoptions.PngOptions;
-import com.aspose.psd.system.io.MemoryStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
@@ -17,11 +17,12 @@ import java.io.FileOutputStream;
  *
  *  
  */
-public class SavingtoStream {
+public class SavingToStream
+{
     public static void main(String[] args) throws FileNotFoundException
     {
-       //ExStart:SavingtoStream
-       String dataDir = Utils.getDataDir(SavingtoStream.class) + "Conversion/";
+       //ExStart:SavingToStream
+       String dataDir = Utils.getDataDir(SavingToStream.class) + "Conversion/";
        
        
 
@@ -35,6 +36,6 @@ public class SavingtoStream {
             FileOutputStream outputStream = new FileOutputStream(destName);
             psdImage.save(outputStream, new PngOptions());
             
-       //ExEnd:SavingtoStream
+       //ExEnd:SavingToStream
     }
 }

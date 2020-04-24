@@ -14,12 +14,12 @@ import com.aspose.psd.imageoptions.JpegOptions;
  *
  *  
  */
-public class ResizingwithResizeTypeEnumeration {
-    
+public class ResizingWithResizeTypeEnumeration
+{
     public static void main(String[] args)  
     {
-       //ExStart:ResizingwithResizeTypeEnumeration
-     String dataDir = Utils.getDataDir(ResizingwithResizeTypeEnumeration.class) + "DrawingAndFormattingImages/";
+       //ExStart:ResizingWithResizeTypeEnumeration
+     String dataDir = Utils.getDataDir(ResizingWithResizeTypeEnumeration.class) + "DrawingAndFormattingImages/";
      
       String sourceFile = dataDir + "sample.psd";
       String destName = dataDir + "ResizingwithResizeTypeEnumeration_out.jpg";
@@ -28,7 +28,7 @@ public class ResizingwithResizeTypeEnumeration {
       Image image = Image.load(sourceFile);
       image.resize(300, 300, ResizeType.LanczosResample);
       image.save(destName, new JpegOptions());
-      //ExEnd:ResizingwithResizeTypeEnumeration
+      //ExEnd:ResizingWithResizeTypeEnumeration
     }
     
 }

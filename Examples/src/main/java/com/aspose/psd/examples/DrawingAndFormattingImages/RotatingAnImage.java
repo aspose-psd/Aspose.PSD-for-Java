@@ -14,12 +14,12 @@ import com.aspose.psd.imageoptions.JpegOptions;
  *
  *  
  */
-public class RotatinganImage {
-    
+public class RotatingAnImage
+{
     public static void main(String[] args)  
     {
-       //ExStart:RotatinganImage
-       String dataDir = Utils.getDataDir(RotatinganImage.class) + "DrawingAndFormattingImages/";
+       //ExStart:RotatingAnImage
+       String dataDir = Utils.getDataDir(RotatingAnImage.class) + "DrawingAndFormattingImages/";
        
        String sourceFile = dataDir + "sample.psd";
        String destName = dataDir + "RotatingAnImage_out.jpg";
@@ -28,7 +28,7 @@ public class RotatinganImage {
        Image image = Image.load(sourceFile);
         image.rotateFlip(RotateFlipType.Rotate270FlipNone);
         image.save(destName, new JpegOptions());
-      //ExEnd:RotatinganImage
+      //ExEnd:RotatingAnImage
     }
     
 

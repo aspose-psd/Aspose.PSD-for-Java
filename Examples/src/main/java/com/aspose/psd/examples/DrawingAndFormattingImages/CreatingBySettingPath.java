@@ -15,11 +15,12 @@ import com.aspose.psd.sources.FileCreateSource;
  *
  *  
  */
-public class CreatingbySettingPath {
+public class CreatingBySettingPath
+{
     public static void main(String[] args) 
     {
-       //ExStart:CreatingbySettingPath
-       String dataDir = Utils.getDataDir(CreatingbySettingPath.class) + "DrawingAndFormattingImages/";
+       //ExStart:CreatingBySettingPath
+       String dataDir = Utils.getDataDir(CreatingBySettingPath.class) + "DrawingAndFormattingImages/";
        String desName = dataDir + "CreatingAnImageBySettingPath_out.psd";
        // Creates an instance of PsdOptions and set its various properties
         PsdOptions psdOptions = new PsdOptions();
@@ -30,7 +31,7 @@ public class CreatingbySettingPath {
         // Creates an instance of Image and call Create method by passing the PsdOptions object
         Image image = Image.create(psdOptions, 500, 500);
         image.save();
-       //ExEnd:CreatingbySettingPath
+       //ExEnd:CreatingBySettingPath
        
     }
 }

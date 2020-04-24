@@ -16,12 +16,12 @@ import com.aspose.psd.imageoptions.PngOptions;
  *
  *  
  */
-public class SettingforReplacingMissingFonts {
-    
+public class SettingForReplacingMissingFonts
+{
     public static void main(String[] args)
     {
-       //ExStart:SettingforReplacingMissingFonts
-       String dataDir = Utils.getDataDir(SettingforReplacingMissingFonts.class) + "Conversion/";
+       //ExStart:SettingForReplacingMissingFonts
+       String dataDir = Utils.getDataDir(SettingForReplacingMissingFonts.class) + "Conversion/";
        
        String sourceFile = dataDir + "sample.psd";
        String destName = dataDir + "result.png";
@@ -39,6 +39,6 @@ public class SettingforReplacingMissingFonts {
         psdImage.save(destName, Options);
             
        
-       //ExEnd:SettingforReplacingMissingFonts
+       //ExEnd:SettingForReplacingMissingFonts
     }
 }

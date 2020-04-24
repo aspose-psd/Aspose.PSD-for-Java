@@ -14,12 +14,12 @@ import com.aspose.psd.imageoptions.PngOptions;
  *
  *  
  */
-public class Bradleythreshold {
-    
+public class BradleyThreshold
+{
      public static void main(String[] args) 
     {
-       //ExStart:Bradleythreshold
-       String dataDir = Utils.getDataDir(Bradleythreshold.class) + "Conversion/";
+       //ExStart:BradleyThreshold
+       String dataDir = Utils.getDataDir(BradleyThreshold.class) + "Conversion/";
        String sourceFile = dataDir + "sample.psd";
        String destName = dataDir + "binarized_out.png";
        
@@ -30,7 +30,7 @@ public class Bradleythreshold {
         double threshold = 0.15;
         image.binarizeBradley(threshold);
         image.save(destName, new PngOptions());
-       //ExEnd:Bradleythreshold
+       //ExEnd:BradleyThreshold
        
     }
 }
