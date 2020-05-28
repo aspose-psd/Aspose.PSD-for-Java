@@ -45,9 +45,9 @@ public class GradientFillLayer {
 
                         if (
                          Math.abs(settings.getAngle() - 45) > 0.25 ||
-                         settings.getDither() != true ||
-                         settings.getAlignWithLayer() != false ||
-                         settings.getReverse() != false ||
+                         !settings.getDither() ||
+                         settings.getAlignWithLayer() ||
+                         settings.getReverse() ||
                          Math.abs(settings.getHorizontalOffset() - (-39)) > 0.25 ||
                          Math.abs(settings.getVerticalOffset() - (-5)) > 0.25 ||
                          settings.getTransparencyPoints().length != 3 ||
@@ -55,7 +55,7 @@ public class GradientFillLayer {
                          Math.abs(100.0 - settings.getTransparencyPoints()[0].getOpacity()) > 0.25 ||
                          settings.getTransparencyPoints()[0].getLocation() != 0 ||
                          settings.getTransparencyPoints()[0].getMedianPointLocation() != 50 ||
-                         settings.getColorPoints()[0].getColor() != Color.fromArgb(203, 64, 140) ||
+                         !settings.getColorPoints()[0].getColor().equals(Color.fromArgb(203, 64, 140)) ||
                          settings.getColorPoints()[0].getLocation() != 0 ||
                          settings.getColorPoints()[0].getMedianPointLocation() != 50)
                         {

@@ -45,14 +45,14 @@ public class AddNewRegularLayerToPSD {
                 }
                 
                 
-                 Layer layer1 = new Layer(); //im.addRegularLayer();
+                 Layer layer1 = im.addRegularLayer();
                 layer1.setLeft( 25);
                 layer1.setTop(25);
                 layer1.setRight(75);
                 layer1.setBottom(75);
                 layer1.saveArgb32Pixels(rect1, data1);
 
-                Layer layer2 = new Layer();//im.addRegularLayer();
+                Layer layer2 = im.addRegularLayer();
                 layer2.setLeft( 25);
                 layer2.setTop(150);
                 layer2.setRight(1255);
