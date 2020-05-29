@@ -7,7 +7,7 @@ package com.aspose.psd.examples.DrawingAndFormattingImages;
 
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
-import com.aspose.psd.examples.Utils.Assert;
+import com.aspose.psd.examples.Utils.Assertions;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.layereffects.DropShadowEffect;
@@ -33,14 +33,14 @@ public class SupportShadowEffect {
          
          DropShadowEffect shadowEffect = (DropShadowEffect)(im.getLayers()[1].getBlendingOptions().getEffects()[0]);
 
-        Assert.areEqual(Color.getBlack(), shadowEffect.getColor());
-        Assert.areEqual(255, shadowEffect.getOpacity());
-        Assert.areEqual(3, shadowEffect.getDistance());
-        Assert.areEqual(7, shadowEffect.getSize());
-        Assert.areEqual(true, shadowEffect.getUseGlobalLight());
-        Assert.areEqual(90, shadowEffect.getAngle());
-        Assert.areEqual(0, shadowEffect.getSpread());
-        Assert.areEqual(0, shadowEffect.getNoise());
+        Assertions.assertEquals(Color.getBlack(), shadowEffect.getColor());
+        Assertions.assertEquals(255, shadowEffect.getOpacity());
+        Assertions.assertEquals(3, shadowEffect.getDistance());
+        Assertions.assertEquals(7, shadowEffect.getSize());
+        Assertions.assertEquals(true, shadowEffect.getUseGlobalLight());
+        Assertions.assertEquals(90, shadowEffect.getAngle());
+        Assertions.assertEquals(0, shadowEffect.getSpread());
+        Assertions.assertEquals(0, shadowEffect.getNoise());
 
         shadowEffect.setColor( Color.getGreen());
         shadowEffect.setOpacity((byte)128);

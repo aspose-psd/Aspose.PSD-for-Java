@@ -6,37 +6,34 @@
 package com.aspose.psd.examples.ModifyingAndConvertingImages.PSD;
 
 import com.aspose.psd.Image;
-import com.aspose.psd.examples.Utils.Assert;
+import com.aspose.psd.examples.Utils.Assertions;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 import com.aspose.psd.fileformats.psd.layers.layerresources.SheetColorHighlightEnum;
 
-
-public class SheetColorHighlighting {
-    
-    public static void main(String[] args) 
+public class SheetColorHighlighting
+{
+    public static void main(String[] args)
     {
-       //ExStart:SheetColorHighlighting
-       String dataDir = Utils.getDataDir(SheetColorHighlighting.class) + "PSD/";
-       
-       String sourceFileName = dataDir+"SheetColorHighlightExample.psd";
-       String exportPath = dataDir+"SheetColorHighlightExampleChanged.psd";
-       
-       
-       // Load a PSD file as an image and cast it into PsdImage
-            PsdImage im = (PsdImage)Image.load(sourceFileName);
-            
-                Layer layer1 = im.getLayers()[0];
-                Assert.areEqual(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
+        //ExStart:SheetColorHighlighting
+        String dataDir = Utils.getDataDir(SheetColorHighlighting.class) + "PSD/";
 
-                Layer layer2 = im.getLayers()[1];
-                Assert.areEqual(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
+        String sourceFileName = dataDir + "SheetColorHighlightExample.psd";
+        String exportPath = dataDir + "SheetColorHighlightExampleChanged.psd";
 
-                layer1.setSheetColorHighlight(SheetColorHighlightEnum.Yellow);
+        // Load a PSD file as an image and cast it into PsdImage
+        PsdImage im = (PsdImage)Image.load(sourceFileName);
 
-                im.save(exportPath);
-            
-       //ExEnd:SheetColorHighlighting
+        Layer layer1 = im.getLayers()[0];
+        Assertions.assertEquals(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
+
+        Layer layer2 = im.getLayers()[1];
+        Assertions.assertEquals(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
+
+        layer1.setSheetColorHighlight(SheetColorHighlightEnum.Yellow);
+
+        im.save(exportPath);
+        //ExEnd:SheetColorHighlighting
     }
 }

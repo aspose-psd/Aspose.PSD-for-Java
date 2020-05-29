@@ -23,7 +23,7 @@ public class SupportForClblResource {
         {
             im = (PsdImage)Image.load(sourceFileName);
             ClblResource resource = getClblResource(im);
-            assertIsTrue(resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should be true");
+            assertassertTrue(resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should be true");
 
             // Test editing and saving
             resource.setBlendClippedElements(false);
@@ -40,7 +40,7 @@ public class SupportForClblResource {
         {
             im2 = (PsdImage)Image.load(destinationFileName);
             ClblResource resource = getClblResource(im2);
-            assertIsTrue(!resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should change to false");
+            assertassertTrue(!resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should change to false");
         } catch (Exception e) {
             e.printStackTrace();
         } finally
@@ -51,7 +51,7 @@ public class SupportForClblResource {
         System.out.println("SupportForClblResource executed successfully");
     }
 
-    private static void assertIsTrue(boolean condition, String message)
+    private static void assertassertTrue(boolean condition, String message)
     {
         if (!condition)
         {

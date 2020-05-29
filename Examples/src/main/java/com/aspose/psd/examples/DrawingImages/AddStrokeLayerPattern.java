@@ -8,7 +8,7 @@ package com.aspose.psd.examples.DrawingImages;
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
 import com.aspose.psd.Rectangle;
-import com.aspose.psd.examples.Utils.Assert;
+import com.aspose.psd.examples.Utils.Assertions;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.BlendMode;
@@ -17,114 +17,109 @@ import com.aspose.psd.fileformats.psd.layers.fillsettings.PatternFillSettings;
 import com.aspose.psd.fileformats.psd.layers.layereffects.StrokeEffect;
 import com.aspose.psd.fileformats.psd.layers.layerresources.PattResource;
 import com.aspose.psd.imageloadoptions.PsdLoadOptions;
+
 import java.util.UUID;
 
 /**
  *
- *  
  */
-public class AddStrokeLayerPattern {
-    
-    public static void main(String[] args) 
+public class AddStrokeLayerPattern
+{
+    public static void main(String[] args)
     {
-       //ExStart:AddStrokeLayerPattern
-       String dataDir = Utils.getDataDir(AddStrokeLayerPattern.class) + "DrawingImages/";
-       
+        //ExStart:AddStrokeLayerPattern
+        String dataDir = Utils.getDataDir(AddStrokeLayerPattern.class) + "DrawingImages/";
+
         // Stroke effect. FillType - Pattern. Example
-        String sourceFileName = dataDir+"Stroke.psd";
-        String exportPath = dataDir+"StrokePatternChanged.psd";
-       
-         PsdLoadOptions loadOptions = new PsdLoadOptions();
-         loadOptions.setLoadEffectsResource( true);
-         // Preparing new data
-            int[] newPattern = new int[]
+        String sourceFileName = dataDir + "Stroke.psd";
+        String exportPath = dataDir + "StrokePatternChanged.psd";
+
+        PsdLoadOptions loadOptions = new PsdLoadOptions();
+        loadOptions.setLoadEffectsResource(true);
+        // Preparing new data
+        int[] newPattern = new int[]
+                {
+                        Color.getAqua().toArgb(), Color.getRed().toArgb(), Color.getRed().toArgb(), Color.getAqua().toArgb(),
+                        Color.getAqua().toArgb(), Color.getWhite().toArgb(), Color.getWhite().toArgb(), Color.getAqua().toArgb(),
+                        Color.getAqua().toArgb(), Color.getWhite().toArgb(), Color.getWhite().toArgb(), Color.getAqua().toArgb(),
+                        Color.getAqua().toArgb(), Color.getRed().toArgb(), Color.getRed().toArgb(), Color.getAqua().toArgb(),
+                };
+
+
+        Rectangle newPatternBounds = new Rectangle(0, 0, 4, 4);
+        UUID guid = UUID.randomUUID();
+
+        PsdImage im = (PsdImage)Image.load(sourceFileName, loadOptions);
+
+        StrokeEffect patternStroke = (StrokeEffect)im.getLayers()[3].getBlendingOptions().getEffects()[0];
+
+        Assertions.assertEquals(BlendMode.Normal, patternStroke.getBlendMode());
+        Assertions.assertEquals(255, patternStroke.getOpacity());
+        Assertions.assertEquals(true, patternStroke.isVisible());
+
+        PatternFillSettings fillSettings = (PatternFillSettings)patternStroke.getFillSettings();
+        Assertions.assertEquals(FillType.Pattern, fillSettings.getFillType());
+
+        patternStroke.setOpacity((byte)127);
+        patternStroke.setBlendMode(BlendMode.Color);
+
+        PattResource resource;
+
+        for (int i = 0; i < im.getGlobalLayerResources().length; i++)
+        {
+
+            if (im.getGlobalLayerResources()[i] instanceof PattResource)
             {
-              Color.getAqua().toArgb(), Color.getRed().toArgb(), Color.getRed().toArgb(), Color.getAqua().toArgb(),
-              Color.getAqua().toArgb(), Color.getWhite().toArgb(), Color.getWhite().toArgb(), Color.getAqua().toArgb(),
-              Color.getAqua().toArgb(), Color.getWhite().toArgb(), Color.getWhite().toArgb(), Color.getAqua().toArgb(),
-              Color.getAqua().toArgb(), Color.getRed().toArgb(), Color.getRed().toArgb(), Color.getAqua().toArgb(),
-            };
-            
-            
-            
-            Rectangle newPatternBounds = new Rectangle(0, 0, 4, 4);
-            UUID guid = UUID.randomUUID();
-            
-            PsdImage im = (PsdImage)Image.load(sourceFileName, loadOptions);
-            
-            
-             StrokeEffect patternStroke = (StrokeEffect)im.getLayers()[3].getBlendingOptions().getEffects()[0];
+                resource = (PattResource)im.getGlobalLayerResources()[i];
+                resource.setPatternId(guid.toString());
+                resource.setName("$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0");
 
-                Assert.areEqual(BlendMode.Normal, patternStroke.getBlendMode());
-                Assert.areEqual(255, patternStroke.getOpacity());
-                Assert.areEqual(true, patternStroke.isVisible());
+                resource.setPattern(newPattern, newPatternBounds);
+            }
+        }
 
-                PatternFillSettings fillSettings = (PatternFillSettings)patternStroke.getFillSettings();
-                Assert.areEqual(FillType.Pattern, fillSettings.getFillType());
+        ((PatternFillSettings)patternStroke.getFillSettings()).setPatternName("$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0");
 
-                patternStroke.setOpacity((byte)127);
-                patternStroke.setBlendMode(BlendMode.Color);
-                
-                
-                PattResource resource;
-                
-                
-                for(int i =0; i < im.getGlobalLayerResources().length; i++ ){
-                 
-                if (im.getGlobalLayerResources()[i] instanceof PattResource)
-                    {
-                        resource = (PattResource)im.getGlobalLayerResources()[i];
-                        resource.setPatternId(guid.toString());
-                        resource.setName("$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0");
+        ((PatternFillSettings)patternStroke.getFillSettings()).setPatternId(guid.toString() + "\0");
+        im.save(exportPath);
 
-                        resource.setPattern(newPattern, newPatternBounds);
-                    }
-                }
+        // Test file after edit
 
-                 ((PatternFillSettings)patternStroke.getFillSettings()).setPatternName( "$$$/Presets/Patterns/HorizontalLine1=Horizontal Line 9\0");
+        PsdImage img = (PsdImage)Image.load(sourceFileName, loadOptions);
 
-                ((PatternFillSettings)patternStroke.getFillSettings()).setPatternId(guid.toString() + "\0") ;
-                im.save(exportPath);
-               
-                
-                 // Test file after edit
-                 
-                 PsdImage img = (PsdImage)Image.load(sourceFileName, loadOptions);
-                 
-                 StrokeEffect patternStrokeEffect = (StrokeEffect)img.getLayers()[3].getBlendingOptions().getEffects()[0];
+        StrokeEffect patternStrokeEffect = (StrokeEffect)img.getLayers()[3].getBlendingOptions().getEffects()[0];
 
-                PattResource resource1 = null;
-                               
-                for(int i = 0; i < img.getGlobalLayerResources().length; i++){
-                    if (img.getGlobalLayerResources()[i] instanceof  PattResource)
-                       {
-                           resource1 = (PattResource)img.getGlobalLayerResources()[i];
+        PattResource resource1 = null;
 
-                       }                
-                }
-                
-                
-                
-                try
-                {
-                    // Check the pattern data
-                    Assert.areEqual(newPattern, resource1.getPatternData());
-                    Assert.areEqual(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
-                    Assert.areEqual(guid.toString(), resource1.getPatternId());
+        for (int i = 0; i < img.getGlobalLayerResources().length; i++)
+        {
+            if (img.getGlobalLayerResources()[i] instanceof PattResource)
+            {
+                resource1 = (PattResource)img.getGlobalLayerResources()[i];
 
-                    Assert.areEqual(BlendMode.Color, patternStrokeEffect.getBlendMode());
-                    Assert.areEqual(127, patternStrokeEffect.getOpacity());
-                    Assert.areEqual(true, patternStrokeEffect.isVisible());
+            }
+        }
 
-                    PatternFillSettings fillSettings1 = (PatternFillSettings)patternStrokeEffect.getFillSettings();
+        try
+        {
+            // Check the pattern data
+            Assertions.assertEquals(newPattern, resource1.getPatternData());
+            Assertions.assertEquals(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
+            Assertions.assertEquals(guid.toString(), resource1.getPatternId());
 
-                    Assert.areEqual(FillType.Pattern, fillSettings1.getFillType());
-                }
-                catch(Exception e)
-                {
-                    System.out.println(e.getMessage());
+            Assertions.assertEquals(BlendMode.Color, patternStrokeEffect.getBlendMode());
+            Assertions.assertEquals(127, patternStrokeEffect.getOpacity());
+            Assertions.assertEquals(true, patternStrokeEffect.isVisible());
 
-                }
-       //ExEnd:AddStrokeLayerPattern
+            PatternFillSettings fillSettings1 = (PatternFillSettings)patternStrokeEffect.getFillSettings();
+
+            Assertions.assertEquals(FillType.Pattern, fillSettings1.getFillType());
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+
+        }
+        //ExEnd:AddStrokeLayerPattern
     }
 }

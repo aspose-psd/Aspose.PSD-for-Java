@@ -30,7 +30,7 @@ public class SupportForInfxResource {
                     {
                         InfxResource resource = (InfxResource)layerResource;
                         isRequiredResourceFound = true;
-                        assertIsTrue(!resource.getBlendInteriorElements(), "The InfxResource.BlendInteriorElements should be false");
+                        assertassertTrue(!resource.getBlendInteriorElements(), "The InfxResource.BlendInteriorElements should be false");
 
                         // Test editing and saving
                         resource.setBlendInteriorElements(true);
@@ -45,7 +45,7 @@ public class SupportForInfxResource {
             if (im != null) im.dispose();
         }
 
-        assertIsTrue(isRequiredResourceFound, "The specified InfxResource not found");
+        assertassertTrue(isRequiredResourceFound, "The specified InfxResource not found");
         isRequiredResourceFound = false;
 
         PsdImage im2 = null;
@@ -60,7 +60,7 @@ public class SupportForInfxResource {
                     {
                         InfxResource resource = (InfxResource)layerResource;
                         isRequiredResourceFound = true;
-                        assertIsTrue(resource.getBlendInteriorElements(), "The InfxResource.BlendInteriorElements should change to true");
+                        assertassertTrue(resource.getBlendInteriorElements(), "The InfxResource.BlendInteriorElements should change to true");
 
                         break;
                     }
@@ -72,10 +72,10 @@ public class SupportForInfxResource {
             if (im2 != null) im2.dispose();
         }
 
-        assertIsTrue(isRequiredResourceFound, "The specified InfxResource not found");
+        assertassertTrue(isRequiredResourceFound, "The specified InfxResource not found");
     }
 
-    private static void assertIsTrue(boolean condition, String message)
+    private static void assertassertTrue(boolean condition, String message)
     {
         if (!condition)
         {
