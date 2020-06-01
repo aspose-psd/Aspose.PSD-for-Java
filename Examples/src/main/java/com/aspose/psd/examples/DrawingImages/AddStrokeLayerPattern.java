@@ -53,12 +53,12 @@ public class AddStrokeLayerPattern
 
         StrokeEffect patternStroke = (StrokeEffect)im.getLayers()[3].getBlendingOptions().getEffects()[0];
 
-        Assert.assertEquals(BlendMode.Normal, patternStroke.getBlendMode());
-        Assert.assertEquals(255, patternStroke.getOpacity());
-        Assert.assertEquals(true, patternStroke.isVisible());
+        Assert.areEqual(BlendMode.Normal, patternStroke.getBlendMode());
+        Assert.areEqual(255, patternStroke.getOpacity());
+        Assert.areEqual(true, patternStroke.isVisible());
 
         PatternFillSettings fillSettings = (PatternFillSettings)patternStroke.getFillSettings();
-        Assert.assertEquals(FillType.Pattern, fillSettings.getFillType());
+        Assert.areEqual(FillType.Pattern, fillSettings.getFillType());
 
         patternStroke.setOpacity((byte)127);
         patternStroke.setBlendMode(BlendMode.Color);
@@ -103,17 +103,17 @@ public class AddStrokeLayerPattern
         try
         {
             // Check the pattern data
-            Assert.assertEquals(newPattern, resource1.getPatternData());
-            Assert.assertEquals(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
-            Assert.assertEquals(guid.toString(), resource1.getPatternId());
+            Assert.areEqual(newPattern, resource1.getPatternData());
+            Assert.areEqual(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
+            Assert.areEqual(guid.toString(), resource1.getPatternId());
 
-            Assert.assertEquals(BlendMode.Color, patternStrokeEffect.getBlendMode());
-            Assert.assertEquals(127, patternStrokeEffect.getOpacity());
-            Assert.assertEquals(true, patternStrokeEffect.isVisible());
+            Assert.areEqual(BlendMode.Color, patternStrokeEffect.getBlendMode());
+            Assert.areEqual(127, patternStrokeEffect.getOpacity());
+            Assert.areEqual(true, patternStrokeEffect.isVisible());
 
             PatternFillSettings fillSettings1 = (PatternFillSettings)patternStrokeEffect.getFillSettings();
 
-            Assert.assertEquals(FillType.Pattern, fillSettings1.getFillType());
+            Assert.areEqual(FillType.Pattern, fillSettings1.getFillType());
         }
         catch (Exception e)
         {

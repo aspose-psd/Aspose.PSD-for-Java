@@ -51,21 +51,21 @@ public class AddPatternEffects
         PsdImage im = (PsdImage)Image.load(sourceFileName, loadOptions);
 
         PatternOverlayEffect patternOverlay = (PatternOverlayEffect)im.getLayers()[1].getBlendingOptions().getEffects()[0];
-        Assert.assertEquals(BlendMode.Normal, patternOverlay.getBlendMode());
-        Assert.assertEquals(127, patternOverlay.getOpacity());
-        Assert.assertEquals(true, patternOverlay.isVisible());
+        Assert.areEqual(BlendMode.Normal, patternOverlay.getBlendMode());
+        Assert.areEqual(127, patternOverlay.getOpacity());
+        Assert.areEqual(true, patternOverlay.isVisible());
 
         PatternFillSettings settings = patternOverlay.getSettings();
-        Assert.assertEquals(Color.getEmpty(), settings.getColor());
-        Assert.assertEquals(FillType.Pattern, settings.getFillType());
-        Assert.assertEquals("85163837-eb9e-5b43-86fb-e6d5963ea29a\0", settings.getPatternId());
-        Assert.assertEquals("$$$/Presets/Patterns/OpticalSquares=Optical Squares\0", settings.getPatternName());
-        Assert.assertEquals(null, settings.getPointType());
-        Assert.assertEquals(100, settings.getScale());
+        Assert.areEqual(Color.getEmpty(), settings.getColor());
+        Assert.areEqual(FillType.Pattern, settings.getFillType());
+        Assert.areEqual("85163837-eb9e-5b43-86fb-e6d5963ea29a\0", settings.getPatternId());
+        Assert.areEqual("$$$/Presets/Patterns/OpticalSquares=Optical Squares\0", settings.getPatternName());
+        Assert.areEqual(null, settings.getPointType());
+        Assert.areEqual(100, settings.getScale());
 
-        Assert.assertEquals(false, settings.getLinked());
-        Assert.assertTrue(Math.abs(0 - settings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
-        Assert.assertTrue(Math.abs(0 - settings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
+        Assert.areEqual(false, settings.getLinked());
+        Assert.isTrue(Math.abs(0 - settings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
+        Assert.isTrue(Math.abs(0 - settings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
 
         // Test editing
         settings.setColor(Color.getGreen());
@@ -99,13 +99,13 @@ public class AddPatternEffects
         PatternOverlayEffect patternOverlayEffect = (PatternOverlayEffect)img.getLayers()[1].getBlendingOptions().getEffects()[0];
         try
         {
-            Assert.assertEquals(BlendMode.Difference, patternOverlayEffect.getBlendMode());
-            Assert.assertEquals(193, patternOverlayEffect.getOpacity());
-            Assert.assertEquals(true, patternOverlayEffect.isVisible());
+            Assert.areEqual(BlendMode.Difference, patternOverlayEffect.getBlendMode());
+            Assert.areEqual(193, patternOverlayEffect.getOpacity());
+            Assert.areEqual(true, patternOverlayEffect.isVisible());
 
             PatternFillSettings fillSetting = patternOverlayEffect.getSettings();
-            Assert.assertEquals(Color.getEmpty(), fillSetting.getColor());
-            Assert.assertEquals(FillType.Pattern, fillSetting.getFillType());
+            Assert.areEqual(Color.getEmpty(), fillSetting.getColor());
+            Assert.areEqual(FillType.Pattern, fillSetting.getFillType());
 
             PattResource resources = null;
 
@@ -119,10 +119,10 @@ public class AddPatternEffects
             }
 
             // Check the pattern data
-            Assert.assertEquals(newPattern, resources.getPatternData());
-            Assert.assertEquals(newPatternBounds, new Rectangle(0, 0, resources.getWidth(), resources.getHeight()));
-            Assert.assertEquals(guid.toString(), resources.getPatternId());
-            Assert.assertEquals(newPatternName, resources.getName());
+            Assert.areEqual(newPattern, resources.getPatternData());
+            Assert.areEqual(newPatternBounds, new Rectangle(0, 0, resources.getWidth(), resources.getHeight()));
+            Assert.areEqual(guid.toString(), resources.getPatternId());
+            Assert.areEqual(newPatternName, resources.getName());
         }
         catch (Exception e)
         {

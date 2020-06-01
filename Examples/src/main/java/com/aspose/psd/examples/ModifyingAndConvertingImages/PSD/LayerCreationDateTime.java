@@ -35,7 +35,7 @@ public class LayerCreationDateTime {
                  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	         Date expectedDateTime = new Date("2018/7/17 8:57:24");
                 
-               Assert.assertEquals(expectedDateTime, creationDateTime);
+               Assert.areEqual(expectedDateTime, creationDateTime);
 
                 Date now = new Date();
                 Layer createdLayer = im.addLevelsAdjustmentLayer();

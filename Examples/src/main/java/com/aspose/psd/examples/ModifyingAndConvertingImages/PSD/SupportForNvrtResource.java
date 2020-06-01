@@ -47,6 +47,6 @@ public class SupportForNvrtResource
             psdImage.dispose();
         }
 
-        Assert.assertNotNull(nvrtResource);
+        Assert.isNotNull(nvrtResource);
     }
 }

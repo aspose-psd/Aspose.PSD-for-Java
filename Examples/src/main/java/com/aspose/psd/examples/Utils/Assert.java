@@ -10,17 +10,17 @@ package com.aspose.psd.examples.Utils;
  */
 public class Assert
 {
-    public static void assertEquals(Object expected, Object actual)
+    public static void areEqual(Object expected, Object actual)
     {
         assert expected != null && expected.equals(actual);
     }
 
-    public static void assertTrue(boolean condition, String message)
+    public static void isTrue(boolean condition, String message)
     {
         assert condition : message;
     }
 
-    public static void assertNotNull(Object actual)
+    public static void isNotNull(Object actual)
     {
         assert actual != null;
     }

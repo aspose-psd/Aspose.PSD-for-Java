@@ -43,44 +43,44 @@ public class AddStrokeLayerGradient {
            
     StrokeEffect gradientStroke = (StrokeEffect)im.getLayers()[2].getBlendingOptions().getEffects()[0];
 
-                Assert.assertEquals(BlendMode.Normal, gradientStroke.getBlendMode());
-                Assert.assertEquals(255, gradientStroke.getOpacity());
-                Assert.assertEquals(true, gradientStroke.isVisible());
+                Assert.areEqual(BlendMode.Normal, gradientStroke.getBlendMode());
+                Assert.areEqual(255, gradientStroke.getOpacity());
+                Assert.areEqual(true, gradientStroke.isVisible());
 
                 GradientFillSettings fillSettings = (GradientFillSettings)gradientStroke.getFillSettings();
-                Assert.assertEquals(Color.getBlack(), fillSettings.getColor());
-                Assert.assertEquals(FillType.Gradient, fillSettings.getFillType());
-                Assert.assertEquals(true, fillSettings.getAlignWithLayer());
-                Assert.assertEquals(GradientType.Linear, fillSettings.getGradientType());
-                Assert.assertTrue(Math.abs(90 - fillSettings.getAngle()) < 0.001, "Angle is incorrect");
-                Assert.assertEquals(false, fillSettings.getDither());
-                Assert.assertTrue(Math.abs(0 - fillSettings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
-                Assert.assertTrue(Math.abs(0 - fillSettings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
-                Assert.assertEquals(false, fillSettings.getReverse());
+                Assert.areEqual(Color.getBlack(), fillSettings.getColor());
+                Assert.areEqual(FillType.Gradient, fillSettings.getFillType());
+                Assert.areEqual(true, fillSettings.getAlignWithLayer());
+                Assert.areEqual(GradientType.Linear, fillSettings.getGradientType());
+                Assert.isTrue(Math.abs(90 - fillSettings.getAngle()) < 0.001, "Angle is incorrect");
+                Assert.areEqual(false, fillSettings.getDither());
+                Assert.isTrue(Math.abs(0 - fillSettings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
+                Assert.isTrue(Math.abs(0 - fillSettings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
+                Assert.areEqual(false, fillSettings.getReverse());
 
                 // Color Points
                 IGradientColorPoint[] colorPoints = fillSettings.getColorPoints();
-                Assert.assertEquals(2, colorPoints.length);
+                Assert.areEqual(2, colorPoints.length);
 
-                Assert.assertEquals(Color.getBlack(), colorPoints[0].getColor());
-                Assert.assertEquals(0, colorPoints[0].getLocation());
-                Assert.assertEquals(50, colorPoints[0].getMedianPointLocation());
+                Assert.areEqual(Color.getBlack(), colorPoints[0].getColor());
+                Assert.areEqual(0, colorPoints[0].getLocation());
+                Assert.areEqual(50, colorPoints[0].getMedianPointLocation());
 
-                Assert.assertEquals(Color.getWhite(), colorPoints[1].getColor());
-                Assert.assertEquals(4096, colorPoints[1].getLocation());
-                Assert.assertEquals(50, colorPoints[1].getMedianPointLocation());
+                Assert.areEqual(Color.getWhite(), colorPoints[1].getColor());
+                Assert.areEqual(4096, colorPoints[1].getLocation());
+                Assert.areEqual(50, colorPoints[1].getMedianPointLocation());
 
                 // Transparency points
                 IGradientTransparencyPoint[] transparencyPoints = fillSettings.getTransparencyPoints();
-                Assert.assertEquals(2, transparencyPoints.length);
+                Assert.areEqual(2, transparencyPoints.length);
 
-                Assert.assertEquals(0, transparencyPoints[0].getLocation());
-                Assert.assertEquals(50, transparencyPoints[0].getMedianPointLocation());
-                Assert.assertEquals(100, transparencyPoints[0].getOpacity());
+                Assert.areEqual(0, transparencyPoints[0].getLocation());
+                Assert.areEqual(50, transparencyPoints[0].getMedianPointLocation());
+                Assert.areEqual(100, transparencyPoints[0].getOpacity());
 
-                Assert.assertEquals(4096, transparencyPoints[1].getLocation());
-                Assert.assertEquals(50, transparencyPoints[1].getMedianPointLocation());
-                Assert.assertEquals(100, transparencyPoints[1].getOpacity());
+                Assert.areEqual(4096, transparencyPoints[1].getLocation());
+                Assert.areEqual(50, transparencyPoints[1].getMedianPointLocation());
+                Assert.areEqual(100, transparencyPoints[1].getOpacity());
                 
                 
                 
@@ -125,49 +125,49 @@ public class AddStrokeLayerGradient {
                 
     StrokeEffect gradientStrokeEffect = (StrokeEffect)img.getLayers()[2].getBlendingOptions().getEffects()[0];
 
-                Assert.assertEquals(BlendMode.Color, gradientStrokeEffect.getBlendMode());
-                Assert.assertEquals(127, gradientStrokeEffect.getOpacity());
-                Assert.assertEquals(true, gradientStrokeEffect.isVisible());
+                Assert.areEqual(BlendMode.Color, gradientStrokeEffect.getBlendMode());
+                Assert.areEqual(127, gradientStrokeEffect.getOpacity());
+                Assert.areEqual(true, gradientStrokeEffect.isVisible());
 
                 GradientFillSettings fillSetting = (GradientFillSettings)gradientStrokeEffect.getFillSettings();
-                Assert.assertEquals(Color.getGreen(), fillSetting.getColor());
-                Assert.assertEquals(FillType.Gradient, fillSetting.getFillType());
+                Assert.areEqual(Color.getGreen(), fillSetting.getColor());
+                Assert.areEqual(FillType.Gradient, fillSetting.getFillType());
 
                 // Check color points
-                Assert.assertEquals(3, fillSetting.getColorPoints().length);
+                Assert.areEqual(3, fillSetting.getColorPoints().length);
 
                 IGradientColorPoint point = fillSetting.getColorPoints()[0];
-                Assert.assertEquals(50, point.getMedianPointLocation());
-                Assert.assertEquals(Color.getBlack(), point.getColor());
-                Assert.assertEquals(0, point.getLocation());
+                Assert.areEqual(50, point.getMedianPointLocation());
+                Assert.areEqual(Color.getBlack(), point.getColor());
+                Assert.areEqual(0, point.getLocation());
 
                 point = fillSettings.getColorPoints()[1];
-                Assert.assertEquals(50, point.getMedianPointLocation());
-                Assert.assertEquals(Color.getWhite(), point.getColor());
-                Assert.assertEquals(1899, point.getLocation());
+                Assert.areEqual(50, point.getMedianPointLocation());
+                Assert.areEqual(Color.getWhite(), point.getColor());
+                Assert.areEqual(1899, point.getLocation());
 
                 point = fillSettings.getColorPoints()[2];
-                Assert.assertEquals(75, point.getMedianPointLocation());
-                Assert.assertEquals(Color.getGreen(), point.getColor());
-                Assert.assertEquals(4096, point.getLocation());
+                Assert.areEqual(75, point.getMedianPointLocation());
+                Assert.areEqual(Color.getGreen(), point.getColor());
+                Assert.areEqual(4096, point.getLocation());
 
                 // Check transparent points
-                Assert.assertEquals(3, fillSettings.getTransparencyPoints().length);
+                Assert.areEqual(3, fillSettings.getTransparencyPoints().length);
 
                 IGradientTransparencyPoint transparencyPoint1 = fillSettings.getTransparencyPoints()[0];
-                Assert.assertEquals(50, transparencyPoint1.getMedianPointLocation());
-                Assert.assertEquals(100, transparencyPoint1.getOpacity());
-                Assert.assertEquals(0, transparencyPoint1.getLocation());
+                Assert.areEqual(50, transparencyPoint1.getMedianPointLocation());
+                Assert.areEqual(100, transparencyPoint1.getOpacity());
+                Assert.areEqual(0, transparencyPoint1.getLocation());
 
                 transparencyPoint1 = fillSettings.getTransparencyPoints()[1];
-                Assert.assertEquals(50, transparencyPoint.getMedianPointLocation());
-                Assert.assertEquals(100, transparencyPoint.getOpacity());
-                Assert.assertEquals(2411, transparencyPoint.getLocation());
+                Assert.areEqual(50, transparencyPoint.getMedianPointLocation());
+                Assert.areEqual(100, transparencyPoint.getOpacity());
+                Assert.areEqual(2411, transparencyPoint.getLocation());
 
                 transparencyPoint1 = fillSettings.getTransparencyPoints()[2];
-                Assert.assertEquals(25, transparencyPoint.getMedianPointLocation());
-                Assert.assertEquals(25, transparencyPoint.getOpacity());
-                Assert.assertEquals(4096, transparencyPoint.getLocation());
+                Assert.areEqual(25, transparencyPoint.getMedianPointLocation());
+                Assert.areEqual(25, transparencyPoint.getOpacity());
+                Assert.areEqual(4096, transparencyPoint.getLocation());
        //ExEnd:AddStrokeLayerGradient
     
     }

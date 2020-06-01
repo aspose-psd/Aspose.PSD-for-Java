@@ -30,12 +30,12 @@ public class TextLayerBoundBox
 
         // Size of the layer is the size of the rendered area
         Size opticalSize = textLayer.getSize();
-        Assert.assertEquals(correctOpticalSize, opticalSize);
+        Assert.areEqual(correctOpticalSize, opticalSize);
 
         // TextBoundBox is the maximum layer size for Text Layer.
         // In this area PS will try to fit your text
         Size boundBox = textLayer.getTextBoundBox();
-        Assert.assertEquals(correctBoundBox, boundBox);
+        Assert.areEqual(correctBoundBox, boundBox);
         //ExEnd:TextLayerBoundBox
     }
 }

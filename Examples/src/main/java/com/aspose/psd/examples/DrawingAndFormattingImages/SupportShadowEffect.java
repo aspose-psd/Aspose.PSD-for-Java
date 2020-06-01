@@ -33,14 +33,14 @@ public class SupportShadowEffect {
          
          DropShadowEffect shadowEffect = (DropShadowEffect)(im.getLayers()[1].getBlendingOptions().getEffects()[0]);
 
-        Assert.assertEquals(Color.getBlack(), shadowEffect.getColor());
-        Assert.assertEquals(255, shadowEffect.getOpacity());
-        Assert.assertEquals(3, shadowEffect.getDistance());
-        Assert.assertEquals(7, shadowEffect.getSize());
-        Assert.assertEquals(true, shadowEffect.getUseGlobalLight());
-        Assert.assertEquals(90, shadowEffect.getAngle());
-        Assert.assertEquals(0, shadowEffect.getSpread());
-        Assert.assertEquals(0, shadowEffect.getNoise());
+        Assert.areEqual(Color.getBlack(), shadowEffect.getColor());
+        Assert.areEqual(255, shadowEffect.getOpacity());
+        Assert.areEqual(3, shadowEffect.getDistance());
+        Assert.areEqual(7, shadowEffect.getSize());
+        Assert.areEqual(true, shadowEffect.getUseGlobalLight());
+        Assert.areEqual(90, shadowEffect.getAngle());
+        Assert.areEqual(0, shadowEffect.getSpread());
+        Assert.areEqual(0, shadowEffect.getNoise());
 
         shadowEffect.setColor( Color.getGreen());
         shadowEffect.setOpacity((byte)128);

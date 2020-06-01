@@ -26,10 +26,10 @@ public class SheetColorHighlighting
         PsdImage im = (PsdImage)Image.load(sourceFileName);
 
         Layer layer1 = im.getLayers()[0];
-        Assert.assertEquals(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
+        Assert.areEqual(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
 
         Layer layer2 = im.getLayers()[1];
-        Assert.assertEquals(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
+        Assert.areEqual(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
 
         layer1.setSheetColorHighlight(SheetColorHighlightEnum.Yellow);
 

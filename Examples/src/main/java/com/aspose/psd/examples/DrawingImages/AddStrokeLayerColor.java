@@ -37,13 +37,13 @@ public class AddStrokeLayerColor
 
         StrokeEffect colorStroke = (StrokeEffect)im.getLayers()[1].getBlendingOptions().getEffects()[0];
 
-        Assert.assertEquals(BlendMode.Normal, colorStroke.getBlendMode());
-        Assert.assertEquals(255, colorStroke.getOpacity());
-        Assert.assertEquals(true, colorStroke.isVisible());
+        Assert.areEqual(BlendMode.Normal, colorStroke.getBlendMode());
+        Assert.areEqual(255, colorStroke.getOpacity());
+        Assert.areEqual(true, colorStroke.isVisible());
 
         ColorFillSettings fillSettings = (ColorFillSettings)colorStroke.getFillSettings();
-        Assert.assertEquals(Color.getBlack(), fillSettings.getColor());
-        Assert.assertEquals(FillType.Color, fillSettings.getFillType());
+        Assert.areEqual(Color.getBlack(), fillSettings.getColor());
+        Assert.areEqual(FillType.Color, fillSettings.getFillType());
 
         fillSettings.setColor(Color.getYellow());
 
