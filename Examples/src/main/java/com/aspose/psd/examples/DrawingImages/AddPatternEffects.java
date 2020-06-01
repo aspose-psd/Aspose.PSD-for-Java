@@ -8,7 +8,7 @@ package com.aspose.psd.examples.DrawingImages;
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
 import com.aspose.psd.Rectangle;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.BlendMode;
@@ -51,21 +51,21 @@ public class AddPatternEffects
         PsdImage im = (PsdImage)Image.load(sourceFileName, loadOptions);
 
         PatternOverlayEffect patternOverlay = (PatternOverlayEffect)im.getLayers()[1].getBlendingOptions().getEffects()[0];
-        Assertions.assertEquals(BlendMode.Normal, patternOverlay.getBlendMode());
-        Assertions.assertEquals(127, patternOverlay.getOpacity());
-        Assertions.assertEquals(true, patternOverlay.isVisible());
+        Assert.assertEquals(BlendMode.Normal, patternOverlay.getBlendMode());
+        Assert.assertEquals(127, patternOverlay.getOpacity());
+        Assert.assertEquals(true, patternOverlay.isVisible());
 
         PatternFillSettings settings = patternOverlay.getSettings();
-        Assertions.assertEquals(Color.getEmpty(), settings.getColor());
-        Assertions.assertEquals(FillType.Pattern, settings.getFillType());
-        Assertions.assertEquals("85163837-eb9e-5b43-86fb-e6d5963ea29a\0", settings.getPatternId());
-        Assertions.assertEquals("$$$/Presets/Patterns/OpticalSquares=Optical Squares\0", settings.getPatternName());
-        Assertions.assertEquals(null, settings.getPointType());
-        Assertions.assertEquals(100, settings.getScale());
+        Assert.assertEquals(Color.getEmpty(), settings.getColor());
+        Assert.assertEquals(FillType.Pattern, settings.getFillType());
+        Assert.assertEquals("85163837-eb9e-5b43-86fb-e6d5963ea29a\0", settings.getPatternId());
+        Assert.assertEquals("$$$/Presets/Patterns/OpticalSquares=Optical Squares\0", settings.getPatternName());
+        Assert.assertEquals(null, settings.getPointType());
+        Assert.assertEquals(100, settings.getScale());
 
-        Assertions.assertEquals(false, settings.getLinked());
-        Assertions.assertTrue(Math.abs(0 - settings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
-        Assertions.assertTrue(Math.abs(0 - settings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
+        Assert.assertEquals(false, settings.getLinked());
+        Assert.assertTrue(Math.abs(0 - settings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
+        Assert.assertTrue(Math.abs(0 - settings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
 
         // Test editing
         settings.setColor(Color.getGreen());
@@ -99,13 +99,13 @@ public class AddPatternEffects
         PatternOverlayEffect patternOverlayEffect = (PatternOverlayEffect)img.getLayers()[1].getBlendingOptions().getEffects()[0];
         try
         {
-            Assertions.assertEquals(BlendMode.Difference, patternOverlayEffect.getBlendMode());
-            Assertions.assertEquals(193, patternOverlayEffect.getOpacity());
-            Assertions.assertEquals(true, patternOverlayEffect.isVisible());
+            Assert.assertEquals(BlendMode.Difference, patternOverlayEffect.getBlendMode());
+            Assert.assertEquals(193, patternOverlayEffect.getOpacity());
+            Assert.assertEquals(true, patternOverlayEffect.isVisible());
 
             PatternFillSettings fillSetting = patternOverlayEffect.getSettings();
-            Assertions.assertEquals(Color.getEmpty(), fillSetting.getColor());
-            Assertions.assertEquals(FillType.Pattern, fillSetting.getFillType());
+            Assert.assertEquals(Color.getEmpty(), fillSetting.getColor());
+            Assert.assertEquals(FillType.Pattern, fillSetting.getFillType());
 
             PattResource resources = null;
 
@@ -119,10 +119,10 @@ public class AddPatternEffects
             }
 
             // Check the pattern data
-            Assertions.assertEquals(newPattern, resources.getPatternData());
-            Assertions.assertEquals(newPatternBounds, new Rectangle(0, 0, resources.getWidth(), resources.getHeight()));
-            Assertions.assertEquals(guid.toString(), resources.getPatternId());
-            Assertions.assertEquals(newPatternName, resources.getName());
+            Assert.assertEquals(newPattern, resources.getPatternData());
+            Assert.assertEquals(newPatternBounds, new Rectangle(0, 0, resources.getWidth(), resources.getHeight()));
+            Assert.assertEquals(guid.toString(), resources.getPatternId());
+            Assert.assertEquals(newPatternName, resources.getName());
         }
         catch (Exception e)
         {

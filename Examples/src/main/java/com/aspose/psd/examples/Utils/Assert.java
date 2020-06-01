@@ -8,7 +8,7 @@ package com.aspose.psd.examples.Utils;
 /**
  * A collection of utility methods that support asserting conditions.
  */
-public class Assertions
+public class Assert
 {
     public static void assertEquals(Object expected, Object actual)
     {

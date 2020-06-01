@@ -7,7 +7,7 @@ package com.aspose.psd.examples.DrawingImages;
 
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.BlendMode;
@@ -37,13 +37,13 @@ public class AddStrokeLayerColor
 
         StrokeEffect colorStroke = (StrokeEffect)im.getLayers()[1].getBlendingOptions().getEffects()[0];
 
-        Assertions.assertEquals(BlendMode.Normal, colorStroke.getBlendMode());
-        Assertions.assertEquals(255, colorStroke.getOpacity());
-        Assertions.assertEquals(true, colorStroke.isVisible());
+        Assert.assertEquals(BlendMode.Normal, colorStroke.getBlendMode());
+        Assert.assertEquals(255, colorStroke.getOpacity());
+        Assert.assertEquals(true, colorStroke.isVisible());
 
         ColorFillSettings fillSettings = (ColorFillSettings)colorStroke.getFillSettings();
-        Assertions.assertEquals(Color.getBlack(), fillSettings.getColor());
-        Assertions.assertEquals(FillType.Color, fillSettings.getFillType());
+        Assert.assertEquals(Color.getBlack(), fillSettings.getColor());
+        Assert.assertEquals(FillType.Color, fillSettings.getFillType());
 
         fillSettings.setColor(Color.getYellow());
 

@@ -6,7 +6,7 @@
 package com.aspose.psd.examples.ModifyingAndConvertingImages.PSD;
 
 import com.aspose.psd.Image;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
@@ -35,7 +35,7 @@ public class LayerCreationDateTime {
                  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	         Date expectedDateTime = new Date("2018/7/17 8:57:24");
                 
-               Assertions.assertEquals(expectedDateTime, creationDateTime);
+               Assert.assertEquals(expectedDateTime, creationDateTime);
 
                 Date now = new Date();
                 Layer createdLayer = im.addLevelsAdjustmentLayer();

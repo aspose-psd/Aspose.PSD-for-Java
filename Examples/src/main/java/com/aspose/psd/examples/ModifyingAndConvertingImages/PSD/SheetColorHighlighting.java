@@ -6,7 +6,7 @@
 package com.aspose.psd.examples.ModifyingAndConvertingImages.PSD;
 
 import com.aspose.psd.Image;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
@@ -26,10 +26,10 @@ public class SheetColorHighlighting
         PsdImage im = (PsdImage)Image.load(sourceFileName);
 
         Layer layer1 = im.getLayers()[0];
-        Assertions.assertEquals(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
+        Assert.assertEquals(SheetColorHighlightEnum.Violet, layer1.getSheetColorHighlight());
 
         Layer layer2 = im.getLayers()[1];
-        Assertions.assertEquals(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
+        Assert.assertEquals(SheetColorHighlightEnum.Orange, layer2.getSheetColorHighlight());
 
         layer1.setSheetColorHighlight(SheetColorHighlightEnum.Yellow);
 

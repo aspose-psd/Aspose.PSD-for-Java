@@ -8,7 +8,7 @@ package com.aspose.psd.examples.DrawingImages;
 import com.aspose.psd.Color;
 import com.aspose.psd.Image;
 import com.aspose.psd.Rectangle;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.BlendMode;
@@ -53,12 +53,12 @@ public class AddStrokeLayerPattern
 
         StrokeEffect patternStroke = (StrokeEffect)im.getLayers()[3].getBlendingOptions().getEffects()[0];
 
-        Assertions.assertEquals(BlendMode.Normal, patternStroke.getBlendMode());
-        Assertions.assertEquals(255, patternStroke.getOpacity());
-        Assertions.assertEquals(true, patternStroke.isVisible());
+        Assert.assertEquals(BlendMode.Normal, patternStroke.getBlendMode());
+        Assert.assertEquals(255, patternStroke.getOpacity());
+        Assert.assertEquals(true, patternStroke.isVisible());
 
         PatternFillSettings fillSettings = (PatternFillSettings)patternStroke.getFillSettings();
-        Assertions.assertEquals(FillType.Pattern, fillSettings.getFillType());
+        Assert.assertEquals(FillType.Pattern, fillSettings.getFillType());
 
         patternStroke.setOpacity((byte)127);
         patternStroke.setBlendMode(BlendMode.Color);
@@ -103,17 +103,17 @@ public class AddStrokeLayerPattern
         try
         {
             // Check the pattern data
-            Assertions.assertEquals(newPattern, resource1.getPatternData());
-            Assertions.assertEquals(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
-            Assertions.assertEquals(guid.toString(), resource1.getPatternId());
+            Assert.assertEquals(newPattern, resource1.getPatternData());
+            Assert.assertEquals(newPatternBounds, new Rectangle(0, 0, resource1.getWidth(), resource1.getHeight()));
+            Assert.assertEquals(guid.toString(), resource1.getPatternId());
 
-            Assertions.assertEquals(BlendMode.Color, patternStrokeEffect.getBlendMode());
-            Assertions.assertEquals(127, patternStrokeEffect.getOpacity());
-            Assertions.assertEquals(true, patternStrokeEffect.isVisible());
+            Assert.assertEquals(BlendMode.Color, patternStrokeEffect.getBlendMode());
+            Assert.assertEquals(127, patternStrokeEffect.getOpacity());
+            Assert.assertEquals(true, patternStrokeEffect.isVisible());
 
             PatternFillSettings fillSettings1 = (PatternFillSettings)patternStrokeEffect.getFillSettings();
 
-            Assertions.assertEquals(FillType.Pattern, fillSettings1.getFillType());
+            Assert.assertEquals(FillType.Pattern, fillSettings1.getFillType());
         }
         catch (Exception e)
         {

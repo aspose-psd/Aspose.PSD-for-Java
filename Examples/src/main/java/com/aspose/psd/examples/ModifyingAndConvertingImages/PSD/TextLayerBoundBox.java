@@ -7,7 +7,7 @@ package com.aspose.psd.examples.ModifyingAndConvertingImages.PSD;
 
 import com.aspose.psd.Image;
 import com.aspose.psd.Size;
-import com.aspose.psd.examples.Utils.Assertions;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.TextLayer;
@@ -30,12 +30,12 @@ public class TextLayerBoundBox
 
         // Size of the layer is the size of the rendered area
         Size opticalSize = textLayer.getSize();
-        Assertions.assertEquals(correctOpticalSize, opticalSize);
+        Assert.assertEquals(correctOpticalSize, opticalSize);
 
         // TextBoundBox is the maximum layer size for Text Layer.
         // In this area PS will try to fit your text
         Size boundBox = textLayer.getTextBoundBox();
-        Assertions.assertEquals(correctBoundBox, boundBox);
+        Assert.assertEquals(correctBoundBox, boundBox);
         //ExEnd:TextLayerBoundBox
     }
 }
