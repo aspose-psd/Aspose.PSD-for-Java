@@ -7,6 +7,7 @@ public class UseCustomRawDataLoader
 {
     public static void main(String[] args)
     {
+        //ExStart:UseCustomRawDataLoader
         class RawDataTester implements IPartialRawDataLoader
         {
             public void process(Rectangle rectangle, byte[] pixels, Point start, Point end)
@@ -32,5 +33,6 @@ public class UseCustomRawDataLoader
         {
             image.dispose();
         }
+        //ExEnd:UseCustomRawDataLoader
     }
 }

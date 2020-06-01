@@ -12,6 +12,7 @@ public class AddFillLayers
 {
     public static void main(String[] args)
     {
+        //ExStart:AddFillLayers
         String outputDir = Utils.GetDataDir_Output();
         String outPsdFilePath = outputDir + "output.psd";
 
@@ -40,5 +41,6 @@ public class AddFillLayers
         {
             psdImage.dispose();
         }
+        //ExEnd:AddFillLayers
     }
 }

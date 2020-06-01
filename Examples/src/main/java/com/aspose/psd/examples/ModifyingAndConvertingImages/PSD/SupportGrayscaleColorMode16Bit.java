@@ -18,6 +18,7 @@ public class SupportGrayscaleColorMode16Bit
 {
     public static void main(String[] args)
     {
+        //ExStart:SupportGrayscaleColorMode16Bit
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -92,5 +93,6 @@ public class SupportGrayscaleColorMode16Bit
         $.saveToPsdThenLoadAndSaveToPng("argb8bit_5x5_no_layers", ColorModes.Grayscale, (short)16, (short)2, CompressionMethod.RLE, -1);
         $.saveToPsdThenLoadAndSaveToPng("cmyk16bit_5x5_no_layers", ColorModes.Grayscale, (short)16, (short)2, CompressionMethod.RLE, -1);
         $.saveToPsdThenLoadAndSaveToPng("index8bit_5x5", ColorModes.Grayscale, (short)16, (short)2, CompressionMethod.RLE, -1);
+        //ExEnd:SupportGrayscaleColorMode16Bit
     }
 }

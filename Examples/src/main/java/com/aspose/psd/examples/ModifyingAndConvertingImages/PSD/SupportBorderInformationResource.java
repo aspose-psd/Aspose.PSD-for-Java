@@ -15,6 +15,7 @@ public class SupportBorderInformationResource
 {
 	public static void main(String[] args)
 	{
+        //ExStart:SupportBorderInformationResource
 		String sourceDir = Utils.GetDataDir_PSD();
 		String outputDir = Utils.GetDataDir_Output();
 
@@ -49,5 +50,6 @@ public class SupportBorderInformationResource
 		{
 		    psdImage.dispose();
 		}
+		//ExEnd:SupportBorderInformationResource
 	}
 }

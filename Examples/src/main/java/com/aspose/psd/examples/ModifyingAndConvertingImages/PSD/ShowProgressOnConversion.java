@@ -23,6 +23,7 @@ public class ShowProgressOnConversion
 {
     public static void main(String[] args)
     {
+        //ExStart:ShowProgressOnConversion
         String sourceDir = Utils.GetDataDir_PSD();
         String sourceFilePath = sourceDir + "Apple.psd";
 
@@ -76,5 +77,6 @@ public class ShowProgressOnConversion
         {
             image.dispose();
         }
+        //ExEnd:ShowProgressOnConversion
     }
 }

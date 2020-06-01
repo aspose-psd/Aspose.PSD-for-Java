@@ -20,6 +20,7 @@ public class FormatTextPortions
 {
     public static void main(String[] args)
     {
+        //ExStart:FormatTextPortions
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -103,5 +104,6 @@ public class FormatTextPortions
         {
             psdImage.dispose();
         }
+        //ExEnd:FormatTextPortions
     }
 }

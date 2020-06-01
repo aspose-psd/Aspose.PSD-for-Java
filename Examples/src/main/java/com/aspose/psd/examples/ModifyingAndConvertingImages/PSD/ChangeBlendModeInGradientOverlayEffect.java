@@ -13,6 +13,7 @@ public class ChangeBlendModeInGradientOverlayEffect
 {
     public static void main(String[] args)
     {
+        //ExStart:ChangeBlendModeInGradientOverlayEffect
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -36,5 +37,6 @@ public class ChangeBlendModeInGradientOverlayEffect
         {
             psdImage.dispose();
         }
+        //ExEnd:ChangeBlendModeInGradientOverlayEffect
     }
 }

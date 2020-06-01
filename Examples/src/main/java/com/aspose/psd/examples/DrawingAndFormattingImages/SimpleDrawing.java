@@ -18,6 +18,7 @@ public class SimpleDrawing
 {
     public static void main(String[] args)
     {
+        //ExStart:SimpleDrawing
         String outputDir = Utils.GetDataDir_Output();
 
         String outPsdFilePath = outputDir + "output.psd";
@@ -53,5 +54,6 @@ public class SimpleDrawing
         {
             image.dispose();
         }
+        //ExEnd:SimpleDrawing
     }
 }

@@ -15,6 +15,7 @@ public class SupportPatternFillLayerRendering
 {
     public static void main(String[] args)
     {
+        //ExStart:SupportPatternFillLayerRendering
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -64,5 +65,6 @@ public class SupportPatternFillLayerRendering
         {
             image.dispose();
         }
+        //ExEnd:SupportPatternFillLayerRendering
     }
 }

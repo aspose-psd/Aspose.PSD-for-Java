@@ -16,6 +16,7 @@ public class SupportForNvrtResource
 {
     public static void main(String[] args)
     {
+        //ExStart:SupportForNvrtResource
         String sourceDir = Utils.GetDataDir_PSD();
         String inPsdFilePath = sourceDir + "InvertAdjustmentLayer.psd";
 
@@ -48,5 +49,6 @@ public class SupportForNvrtResource
         }
 
         Assert.isNotNull(nvrtResource);
+        //ExEnd:SupportForNvrtResource
     }
 }

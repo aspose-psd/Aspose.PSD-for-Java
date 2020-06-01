@@ -21,9 +21,10 @@ public class ModifyGradientOverlayEffect
 {
 	public static void main(String[] args)
 	{
+        //ExStart:ModifyGradientOverlayEffect
 		String sourceDir = Utils.GetDataDir_PSD();
 		String outputDir = Utils.GetDataDir_Output();
-		
+
 		String inPsdFilePath = sourceDir + "psdnet256.psd";
 		String outPsdFilePath = outputDir + "psdnet256.psd_output.psd";
 		
@@ -89,5 +90,6 @@ public class ModifyGradientOverlayEffect
 		{
 		    psdImage.dispose();
 		}
+		//ExEnd:ModifyGradientOverlayEffect
 	}
 }

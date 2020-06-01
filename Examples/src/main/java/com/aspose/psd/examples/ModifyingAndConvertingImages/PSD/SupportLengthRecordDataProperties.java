@@ -17,6 +17,7 @@ public class SupportLengthRecordDataProperties
 {
     public static void main(String[] args)
     {
+        //ExStart:SupportLengthRecordDataProperties
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -54,5 +55,6 @@ public class SupportLengthRecordDataProperties
         {
             psdImage.dispose();
         }
+        //ExEnd:SupportLengthRecordDataProperties
     }
 }

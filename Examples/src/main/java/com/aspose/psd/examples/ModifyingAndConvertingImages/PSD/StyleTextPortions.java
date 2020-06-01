@@ -17,10 +17,11 @@ import com.aspose.psd.fileformats.psd.layers.text.rendering.FontCaps;
  * modifies the text style of an existing text layer and adds to one a few new text portions
  * styled differently then saves a changed copy of the document as a new PSD file.
  */
-public class FormatTextPortions2
+public class StyleTextPortions
 {
     public static void main(String[] args)
     {
+        //ExStart:StyleTextPortions
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -75,5 +76,6 @@ public class FormatTextPortions2
         {
             psdImage.dispose();
         }
+        //ExEnd:StyleTextPortions
     }
 }

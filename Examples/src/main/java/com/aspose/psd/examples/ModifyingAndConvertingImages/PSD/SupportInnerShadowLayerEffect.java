@@ -13,6 +13,7 @@ public class SupportInnerShadowLayerEffect
 {
     public static void main(String[] args)
     {
+        //ExStart:SupportInnerShadowLayerEffect
         String sourceDir = Utils.GetDataDir_PSD();
         String outputDir = Utils.GetDataDir_Output();
 
@@ -44,5 +45,6 @@ public class SupportInnerShadowLayerEffect
         {
             image.dispose();
         }
+        //ExEnd:SupportInnerShadowLayerEffect
     }
 }
