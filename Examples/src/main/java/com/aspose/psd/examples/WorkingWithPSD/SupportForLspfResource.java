@@ -1,12 +1,12 @@
 package com.aspose.psd.examples.WorkingWithPSD;
 
 import com.aspose.psd.Image;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 import com.aspose.psd.fileformats.psd.layers.LayerResource;
 import com.aspose.psd.fileformats.psd.layers.layerresources.LspfResource;
-import com.aspose.psd.internal.Exceptions.FormatException;
 
 
 public class SupportForLspfResource {
@@ -33,27 +33,27 @@ public class SupportForLspfResource {
 
                         isRequiredResourceFound = true;
 
-                        assertassertTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
 
                         // Test editing and saving
                         resource.setCompositeProtected(true);
-                        assertassertTrue(resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
 
                         resource.setCompositeProtected(false);
                         resource.setPositionProtected(true);
-                        assertassertTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
 
                         resource.setPositionProtected(false);
                         resource.setTransparencyProtected(true);
-                        assertassertTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(!resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
 
                         resource.setCompositeProtected(true);
                         resource.setPositionProtected(true);
@@ -70,7 +70,7 @@ public class SupportForLspfResource {
             if (im != null) im.dispose();
         }
 
-        assertassertTrue(isRequiredResourceFound, "The specified LspfResource not found");
+        Assert.isTrue(isRequiredResourceFound, "The specified LspfResource not found");
         isRequiredResourceFound = false;
 
         PsdImage im2 = null;
@@ -87,9 +87,9 @@ public class SupportForLspfResource {
 
                         isRequiredResourceFound = true;
 
-                        assertassertTrue(resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
-                        assertassertTrue(resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isCompositeProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isPositionProtected(), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(resource.isTransparencyProtected(), actualPropertyValueIsWrongMessage);
 
                         break;
                     }
@@ -101,16 +101,8 @@ public class SupportForLspfResource {
             if (im2 != null) im2.dispose();
         }
 
-        assertassertTrue(isRequiredResourceFound, "The specified LspfResource not found");
+        Assert.isTrue(isRequiredResourceFound, "The specified LspfResource not found");
         System.out.println("LspfResource updating works as expected. Press any key.");
-    }
-
-    private static void assertassertTrue(boolean condition, String message)
-    {
-        if (!condition)
-        {
-            throw new FormatException(message);
-        }
     }
     //ExEnd:1
 }
