@@ -5,22 +5,23 @@
  */
 package com.aspose.psd.examples.Utils;
 
-public class Assert {
-    public static boolean areEqual(Object left, Object right) {
-        return left == right;
+/**
+ * A collection of utility methods that support asserting conditions.
+ */
+public class Assert
+{
+    public static void areEqual(Object expected, Object actual)
+    {
+        assert expected != null && expected.equals(actual);
     }
 
-    public static boolean areEqual(Object left, Object right, Object epsilon) {
-        return left == right;
+    public static void isTrue(boolean condition, String message)
+    {
+        assert condition : message;
     }
 
-    public static boolean areNotEqual(Object left, Object right) {
-        return left == right;
+    public static void isNotNull(Object actual)
+    {
+        assert actual != null;
     }
-    
-   public static void IsTrue(boolean b, String invalid_Z_value) {
-        
-    }
-    
-    
 }

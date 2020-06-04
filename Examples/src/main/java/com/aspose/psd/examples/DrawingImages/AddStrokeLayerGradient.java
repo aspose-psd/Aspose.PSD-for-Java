@@ -52,10 +52,10 @@ public class AddStrokeLayerGradient {
                 Assert.areEqual(FillType.Gradient, fillSettings.getFillType());
                 Assert.areEqual(true, fillSettings.getAlignWithLayer());
                 Assert.areEqual(GradientType.Linear, fillSettings.getGradientType());
-                Assert.IsTrue(Math.abs(90 - fillSettings.getAngle()) < 0.001, "Angle is incorrect");
+                Assert.isTrue(Math.abs(90 - fillSettings.getAngle()) < 0.001, "Angle is incorrect");
                 Assert.areEqual(false, fillSettings.getDither());
-                Assert.IsTrue(Math.abs(0 - fillSettings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
-                Assert.IsTrue(Math.abs(0 - fillSettings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
+                Assert.isTrue(Math.abs(0 - fillSettings.getHorizontalOffset()) < 0.001, "Horizontal offset is incorrect");
+                Assert.isTrue(Math.abs(0 - fillSettings.getVerticalOffset()) < 0.001, "Vertical offset is incorrect");
                 Assert.areEqual(false, fillSettings.getReverse());
 
                 // Color Points
@@ -80,7 +80,7 @@ public class AddStrokeLayerGradient {
 
                 Assert.areEqual(4096, transparencyPoints[1].getLocation());
                 Assert.areEqual(50, transparencyPoints[1].getMedianPointLocation());
-                Assert.areEqual(100, transparencyPoints[1].getOpacity()); 
+                Assert.areEqual(100, transparencyPoints[1].getOpacity());
                 
                 
                 

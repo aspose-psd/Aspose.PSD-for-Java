@@ -12,7 +12,6 @@ import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.BlendMode;
 import com.aspose.psd.fileformats.psd.layers.layereffects.ColorOverlayEffect;
 import com.aspose.psd.imageloadoptions.PsdLoadOptions;
-import javafx.scene.effect.Effect;
 
 /**
  *

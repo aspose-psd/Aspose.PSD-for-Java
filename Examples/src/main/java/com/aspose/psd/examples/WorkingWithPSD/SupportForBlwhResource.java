@@ -1,13 +1,13 @@
 package com.aspose.psd.examples.WorkingWithPSD;
 
 import com.aspose.psd.Image;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 import com.aspose.psd.fileformats.psd.layers.LayerResource;
 import com.aspose.psd.fileformats.psd.layers.adjustmentlayers.BlackWhiteAdjustmentLayer;
 import com.aspose.psd.fileformats.psd.layers.layerresources.BlwhResource;
-import com.aspose.psd.internal.Exceptions.FormatException;
 
 
 public class SupportForBlwhResource {
@@ -51,14 +51,6 @@ public class SupportForBlwhResource {
         System.out.println("BlwhResource updating works as expected. Press any key.");
     }
 
-    private static void assertIsTrue(boolean condition, String message)
-    {
-        if (!condition)
-        {
-            throw new FormatException(message);
-        }
-    }
-
     private static void exampleSupportOfBlwhResource(
             String sourceFileName,
             int reds,
@@ -96,19 +88,19 @@ public class SupportForBlwhResource {
                         BlackWhiteAdjustmentLayer blwhLayer = (BlackWhiteAdjustmentLayer)layer;
                         isRequiredResourceFound = true;
 
-                        assertIsTrue(blwhResource.getReds() == reds, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getYellows() == yellows, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getGreens() == greens, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getCyans() == cyans, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBlues() == blues, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getMagentas() == magentas, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getUseTint() == useTint, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getTintColor() == tintColor, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBwPresetKind() == bwPresetKind, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBlackAndWhitePresetFileName().equals(bwPresetFileName), actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorRed() - tintColorRed) < 1e-6, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorGreen() - tintColorGreen) < 1e-6, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorBlue() - tintColorBlue) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getReds() == reds, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getYellows() == yellows, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getGreens() == greens, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getCyans() == cyans, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBlues() == blues, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getMagentas() == magentas, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getUseTint() == useTint, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getTintColor() == tintColor, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBwPresetKind() == bwPresetKind, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBlackAndWhitePresetFileName().equals(bwPresetFileName), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorRed() - tintColorRed) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorGreen() - tintColorGreen) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorBlue() - tintColorBlue) < 1e-6, actualPropertyValueIsWrongMessage);
 
                         // Test editing and saving
                         blwhResource.setReds(reds - 15);
@@ -135,7 +127,7 @@ public class SupportForBlwhResource {
             if (im != null) im.dispose();
         }
 
-        assertIsTrue(isRequiredResourceFound, "The specified BlwhResource not found");
+        Assert.isTrue(isRequiredResourceFound, "The specified BlwhResource not found");
         isRequiredResourceFound = false;
 
         PsdImage im2 = null;
@@ -153,19 +145,19 @@ public class SupportForBlwhResource {
                         BlackWhiteAdjustmentLayer blwhLayer = (BlackWhiteAdjustmentLayer)layer;
                         isRequiredResourceFound = true;
 
-                        assertIsTrue(blwhResource.getReds() == reds - 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getYellows() == yellows - 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getGreens() == greens + 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getCyans() == cyans + 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBlues() == blues - 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getMagentas() == magentas - 15, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getUseTint() == !useTint, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getTintColor() == newTintColor, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBwPresetKind() == 4, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(blwhResource.getBlackAndWhitePresetFileName().equals("bwPresetFileName"), actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorRed() - tintColorRed + 60) < 1e-6, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorGreen() - tintColorGreen + 60) < 1e-6, actualPropertyValueIsWrongMessage);
-                        assertIsTrue(Math.abs(blwhLayer.getTintColorBlue() - tintColorBlue + 60) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getReds() == reds - 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getYellows() == yellows - 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getGreens() == greens + 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getCyans() == cyans + 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBlues() == blues - 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getMagentas() == magentas - 15, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getUseTint() == !useTint, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getTintColor() == newTintColor, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBwPresetKind() == 4, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(blwhResource.getBlackAndWhitePresetFileName().equals("bwPresetFileName"), actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorRed() - tintColorRed + 60) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorGreen() - tintColorGreen + 60) < 1e-6, actualPropertyValueIsWrongMessage);
+                        Assert.isTrue(Math.abs(blwhLayer.getTintColorBlue() - tintColorBlue + 60) < 1e-6, actualPropertyValueIsWrongMessage);
 
                         break;
                     }
@@ -177,7 +169,7 @@ public class SupportForBlwhResource {
             if (im2 != null) im2.dispose();
         }
 
-        assertIsTrue(isRequiredResourceFound, "The specified BlwhResource not found");
+        Assert.isTrue(isRequiredResourceFound, "The specified BlwhResource not found");
     }
     //ExEnd:1
 }

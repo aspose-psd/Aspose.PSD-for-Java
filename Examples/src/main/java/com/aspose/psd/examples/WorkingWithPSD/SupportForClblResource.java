@@ -1,12 +1,12 @@
 package com.aspose.psd.examples.WorkingWithPSD;
 
 import com.aspose.psd.Image;
+import com.aspose.psd.examples.Utils.Assert;
 import com.aspose.psd.examples.Utils.Utils;
 import com.aspose.psd.fileformats.psd.PsdImage;
 import com.aspose.psd.fileformats.psd.layers.Layer;
 import com.aspose.psd.fileformats.psd.layers.LayerResource;
 import com.aspose.psd.fileformats.psd.layers.layerresources.ClblResource;
-import com.aspose.psd.internal.Exceptions.FormatException;
 
 
 public class SupportForClblResource {
@@ -23,7 +23,7 @@ public class SupportForClblResource {
         {
             im = (PsdImage)Image.load(sourceFileName);
             ClblResource resource = getClblResource(im);
-            assertIsTrue(resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should be true");
+            Assert.isTrue(resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should be true");
 
             // Test editing and saving
             resource.setBlendClippedElements(false);
@@ -40,7 +40,7 @@ public class SupportForClblResource {
         {
             im2 = (PsdImage)Image.load(destinationFileName);
             ClblResource resource = getClblResource(im2);
-            assertIsTrue(!resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should change to false");
+            Assert.isTrue(!resource.getBlendClippedElements(), "The ClblResource.BlendClippedElements should change to false");
         } catch (Exception e) {
             e.printStackTrace();
         } finally
@@ -49,14 +49,6 @@ public class SupportForClblResource {
         }
 
         System.out.println("SupportForClblResource executed successfully");
-    }
-
-    private static void assertIsTrue(boolean condition, String message)
-    {
-        if (!condition)
-        {
-            throw new FormatException(message);
-        }
     }
 
     private static ClblResource getClblResource(PsdImage im) throws Exception {
