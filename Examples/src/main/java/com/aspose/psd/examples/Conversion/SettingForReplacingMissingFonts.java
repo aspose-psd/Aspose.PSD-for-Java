@@ -27,16 +27,16 @@ public class SettingForReplacingMissingFonts
        String destName = dataDir + "result.png";
           
        PsdLoadOptions loadOptions = new PsdLoadOptions();
-       loadOptions.setDefaultReplacementFont("Arial");
        
         // load PSD image and replace the non found fonts.
         Image image = Image.load(sourceFile,loadOptions);
             
         PsdImage psdImage = (PsdImage)image;
         
-        PngOptions Options = new PngOptions();
-        Options.setColorType(PngColorType.TruecolorWithAlpha);
-        psdImage.save(destName, Options);
+        PngOptions pngOptions = new PngOptions();
+        pngOptions.setColorType(PngColorType.TruecolorWithAlpha);
+        pngOptions.setDefaultReplacementFont("Arial");
+        psdImage.save(destName, pngOptions);
             
        
        //ExEnd:SettingForReplacingMissingFonts

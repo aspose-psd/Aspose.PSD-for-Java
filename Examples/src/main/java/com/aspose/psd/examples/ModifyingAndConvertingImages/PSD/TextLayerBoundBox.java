@@ -34,7 +34,7 @@ public class TextLayerBoundBox
 
         // TextBoundBox is the maximum layer size for Text Layer.
         // In this area PS will try to fit your text
-        Size boundBox = textLayer.getTextBoundBox();
+        Size boundBox = textLayer.getTextBoundBox().getSize().toSize();
         Assert.areEqual(correctBoundBox, boundBox);
         //ExEnd:TextLayerBoundBox
     }
