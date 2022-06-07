@@ -13,7 +13,7 @@ public class AIToTIFF {
     public static void main(String[] args) 
     {
        //ExStart:AIToTIFF
-       String dataDir = Utils.getDataDir(AIToPSD.class) + "AI/"; 
+       String dataDir = Utils.getDataDir(AIToTIFF.class) + "AI/"; 
        
        String sourceFileName    = dataDir + "34992OStroke.ai";       
        String outFileName       = dataDir + "34992OStroke.tiff";
